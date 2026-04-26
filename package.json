@@ -1,0 +1,49 @@
+{
+  "name": "reonic-track-tech-europe",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "reonic:build-offers": "node scripts/reonic/build_offer_catalog.mjs",
+    "reonic:build-priors": "node scripts/reonic/build_recommendation_priors.mjs",
+    "reonic:build-training-dataset": "node scripts/reonic/build_training_dataset.mjs",
+    "reonic:build-offer-model": "node scripts/reonic/build_offer_model.mjs",
+    "reonic:evaluate": "node scripts/reonic/evaluate_recommender.mjs",
+    "ml:export": "node scripts/ml/export_scenarios.mjs",
+    "ml:seed-scenarios": "node scripts/ml/seed_synthetic_scenarios.mjs",
+    "ml:build-sft": "node scripts/ml/build_sft_dataset.mjs",
+    "ml:build-prefs": "node scripts/ml/generate_preference_pairs.mjs",
+    "ml:eval": "node scripts/ml/evaluate_rationale_quality.mjs"
+  },
+  "dependencies": {
+    "@gltf-transform/core": "^4.3.0",
+    "@google/generative-ai": "^0.24.1",
+    "@hookform/resolvers": "^5.2.2",
+    "@loaders.gl/core": "^4.4.1",
+    "@loaders.gl/gltf": "^4.4.1",
+    "@supabase/supabase-js": "^2.104.1",
+    "next": "16.2.4",
+    "pg": "^8.20.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-hook-form": "^7.73.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitest/coverage-v8": "^4.1.5",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.4",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vitest": "^4.1.5"
+  }
+}
