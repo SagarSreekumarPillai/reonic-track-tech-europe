@@ -1,0 +1,36 @@
+{
+  "sourceRows": 1619,
+  "demand": {
+    "avgKwh": 5090.45,
+    "evAvgKwh": 4535.61,
+    "nonEvAvgKwh": 5112.75,
+    "evMultiplier": 0.887,
+    "pvDemandDivisor": 925.54
+  },
+  "heating": {
+    "unknown": {
+      "count": 1406,
+      "avgDemandKwh": 5200.5
+    },
+    "gas": {
+      "count": 18,
+      "avgDemandKwh": 4383.33
+    },
+    "heatpump": {
+      "count": 171,
+      "avgDemandKwh": 4301.04
+    },
+    "otherrenewable": {
+      "count": 1,
+      "avgDemandKwh": 3500
+    },
+    "oil": {
+      "count": 8,
+      "avgDemandKwh": 4487.5
+    },
+    "othernonrenewable": {
+      "count": 1,
+      "avgDemandKwh": 4500
+    }
+  }
+}
