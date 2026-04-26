@@ -22,6 +22,8 @@ export interface HouseholdProfile {
   heatingType: HeatingType;
   householdSize: number;
   hasHeatPump: boolean;
+  /** Optional install site: street/city, place name, or coordinates like "52.52,13.405" for map apps */
+  siteAddress?: string;
 }
 
 export interface RefinementOverrides {
