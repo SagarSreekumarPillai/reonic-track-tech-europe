@@ -41,3 +41,65 @@ body {
 .btn-secondary {
   @apply rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-800;
 }
+
+.btn-tab {
+  @apply rounded-md px-3 py-1.5 text-xs font-medium text-slate-400 transition hover:text-slate-200;
+}
+
+.btn-tab-active {
+  @apply rounded-md bg-slate-800 px-3 py-1.5 text-xs font-semibold text-cyan-200 shadow-inner;
+}
+
+.dash-col-scroll {
+  @apply min-h-0 flex-1 overflow-y-auto overscroll-y-contain pr-1;
+}
+
+.field-compact span {
+  @apply text-[11px] font-medium uppercase tracking-wide text-slate-500;
+}
+
+.field-compact .input {
+  @apply py-1.5 text-sm;
+}
+
+.kpi-cell {
+  @apply rounded-lg border border-slate-800 bg-slate-950/80 px-2 py-1.5;
+}
+
+.kpi-cell dt {
+  @apply text-[10px] font-medium uppercase tracking-wide text-slate-500;
+}
+
+.kpi-cell dd {
+  @apply mt-0.5 text-sm font-semibold text-white;
+}
+
+.loader-lottie-ish {
+  position: relative;
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.loader-lottie-ish::before,
+.loader-lottie-ish::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  border-top-color: rgb(34 211 238);
+  animation: dash-spin 0.9s linear infinite;
+}
+
+.loader-lottie-ish::after {
+  inset: 5px;
+  border-top-color: rgb(148 163 184);
+  animation-duration: 1.25s;
+  animation-direction: reverse;
+}
+
+@keyframes dash-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
