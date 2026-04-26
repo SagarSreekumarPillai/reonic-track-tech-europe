@@ -18,6 +18,7 @@ const profileSchema = z.object({
   heatingType: z.enum(["gas", "oil", "electric", "district", "other"]),
   householdSize: z.number().min(1).max(10),
   hasHeatPump: z.boolean(),
+  siteAddress: z.string().trim().max(500).optional(),
 });
 
 const requestSchema = z.object({
