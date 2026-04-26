@@ -5,6 +5,7 @@ const INPUT_FILE = path.resolve("src/data/reonic-training-dataset.json");
 const COMPONENT_MODEL_FILE = path.resolve("src/data/reonic-component-model.json");
 const COMPONENT_PREDICTOR_FILE = path.resolve("src/data/reonic-component-predictor.json");
 const OUTPUT_FILE = path.resolve("src/data/reonic-component-weights.json");
+const TUNING_REPORT_FILE = path.resolve("ml/data/reonic_component_weights_tuning.json");
 
 function f1ComponentOverlap(predicted, truth) {
   const a = new Set((predicted ?? []).map((x) => String(x).toLowerCase()));
@@ -37,6 +38,27 @@ function gaussianScore(x, centroid, spread) {
     score += z * z;
   }
   return Math.exp((-0.5 * score) / Math.max(1, len));
+}
+
+function mulberry32(seed) {
+  let t = seed >>> 0;
+  return function rand() {
+    t += 0x6d2b79f5;
+    let x = t;
+    x = Math.imul(x ^ (x >>> 15), x | 1);
+    x ^= x + Math.imul(x ^ (x >>> 7), x | 61);
+    return ((x ^ (x >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function shuffleWithSeed(arr, seed) {
+  const random = mulberry32(seed);
+  const out = [...arr];
+  for (let i = out.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(random() * (i + 1));
+    [out[i], out[j]] = [out[j], out[i]];
+  }
+  return out;
 }
 
 function aggregateComponents(nearest, sample, componentModel, componentPredictor, weights) {
@@ -127,40 +149,124 @@ async function main() {
   const dataset = JSON.parse(await fs.readFile(INPUT_FILE, "utf8"));
   const componentModel = JSON.parse(await fs.readFile(COMPONENT_MODEL_FILE, "utf8"));
   const componentPredictor = JSON.parse(await fs.readFile(COMPONENT_PREDICTOR_FILE, "utf8"));
-  const shuffled = [...dataset].sort(() => Math.random() - 0.5);
-  const split = Math.floor(shuffled.length * 0.8);
-  const train = shuffled.slice(0, split);
-  const test = shuffled.slice(split);
-
-  const grid = [];
-  for (const objectivePrior of [0.12, 0.18, 0.24]) {
+  const seeds = [11, 37];
+  const coarseGrid = [];
+  for (const objectivePrior of [0.14, 0.2, 0.26]) {
     for (const familyPrior of [0.18, 0.24, 0.3]) {
-      for (const bundleBoost of [1.8, 2.3, 2.8]) {
-        for (const coOccurrence of [0.006, 0.01, 0.015]) {
-          for (const predictor of [0.7, 0.9, 1.1]) {
-            grid.push({ objectivePrior, familyPrior, bundleBoost, coOccurrence, predictor });
+      for (const bundleBoost of [1.6, 2.0, 2.4]) {
+        for (const coOccurrence of [0.008, 0.012, 0.016]) {
+          for (const predictor of [0.65, 0.85, 1.05]) {
+            coarseGrid.push({
+              objectivePrior,
+              familyPrior,
+              bundleBoost,
+              coOccurrence,
+              predictor,
+            });
           }
         }
       }
     }
   }
 
-  let best = null;
-  for (const w of grid) {
-    const f1s = [];
-    for (const sample of test) {
-      const nearest = [...train]
-        .sort((a, b) => distance(a, sample) - distance(b, sample))
-        .slice(0, 12);
-      const pred = aggregateComponents(nearest, sample, componentModel, componentPredictor, w);
-      f1s.push(f1ComponentOverlap(pred, sample.offer.components));
+  function evaluateWeights(weights) {
+    const perSeed = [];
+    for (const seed of seeds) {
+      const shuffled = shuffleWithSeed(dataset, seed);
+      const split = Math.floor(shuffled.length * 0.8);
+      const train = shuffled.slice(0, split);
+      const test = shuffled.slice(split);
+      const f1s = [];
+      for (const sample of test) {
+        const nearest = [...train]
+          .sort((a, b) => distance(a, sample) - distance(b, sample))
+          .slice(0, 12);
+        const pred = aggregateComponents(
+          nearest,
+          sample,
+          componentModel,
+          componentPredictor,
+          weights
+        );
+        f1s.push(f1ComponentOverlap(pred, sample.offer.components));
+      }
+      const meanF1 = f1s.reduce((s, x) => s + x, 0) / Math.max(f1s.length, 1);
+      perSeed.push(meanF1);
     }
-    const meanF1 = f1s.reduce((s, x) => s + x, 0) / Math.max(f1s.length, 1);
-    if (!best || meanF1 > best.meanF1) best = { ...w, meanF1 };
+    const meanF1 = perSeed.reduce((s, x) => s + x, 0) / perSeed.length;
+    const variance =
+      perSeed.reduce((s, x) => s + (x - meanF1) ** 2, 0) / Math.max(perSeed.length, 1);
+    const stabilityPenalty = Math.sqrt(variance) * 0.35;
+    return {
+      meanF1,
+      perSeed,
+      variance,
+      robustScore: meanF1 - stabilityPenalty,
+    };
   }
 
-  await fs.writeFile(OUTPUT_FILE, JSON.stringify(best, null, 2), "utf8");
-  console.log("best", best);
+  const coarseResults = [];
+  for (const weights of coarseGrid) {
+    coarseResults.push({ weights, ...evaluateWeights(weights) });
+  }
+  coarseResults.sort((a, b) => b.robustScore - a.robustScore);
+
+  const top = coarseResults.slice(0, 4);
+  const fineGrid = [];
+  for (const base of top) {
+    const w = base.weights;
+    for (const objectivePrior of [w.objectivePrior - 0.02, w.objectivePrior + 0.02]) {
+      for (const familyPrior of [w.familyPrior - 0.02, w.familyPrior + 0.02]) {
+        for (const bundleBoost of [w.bundleBoost - 0.2, w.bundleBoost + 0.2]) {
+          for (const coOccurrence of [w.coOccurrence - 0.002, w.coOccurrence + 0.002]) {
+            for (const predictor of [w.predictor - 0.08, w.predictor + 0.08]) {
+              fineGrid.push({
+                objectivePrior: Math.max(0.05, Number(objectivePrior.toFixed(3))),
+                familyPrior: Math.max(0.05, Number(familyPrior.toFixed(3))),
+                bundleBoost: Math.max(0.8, Number(bundleBoost.toFixed(3))),
+                coOccurrence: Math.max(0.001, Number(coOccurrence.toFixed(4))),
+                predictor: Math.max(0.2, Number(predictor.toFixed(3))),
+              });
+            }
+          }
+        }
+      }
+    }
+  }
+
+  const dedupFineGrid = Array.from(
+    new Map(fineGrid.map((x) => [JSON.stringify(x), x])).values()
+  );
+  const fineResults = dedupFineGrid.map((weights) => ({ weights, ...evaluateWeights(weights) }));
+  fineResults.sort((a, b) => b.robustScore - a.robustScore);
+  const best = fineResults[0];
+
+  const payload = {
+    ...best.weights,
+    meanF1: best.meanF1,
+    robustScore: best.robustScore,
+    variance: best.variance,
+    perSeed: best.perSeed,
+    method: "two_stage_grid_with_seed_stability",
+  };
+  await fs.writeFile(OUTPUT_FILE, JSON.stringify(payload, null, 2), "utf8");
+  await fs.mkdir(path.dirname(TUNING_REPORT_FILE), { recursive: true });
+  await fs.writeFile(
+    TUNING_REPORT_FILE,
+    JSON.stringify(
+      {
+        generatedAt: new Date().toISOString(),
+        seeds,
+        coarseTop: coarseResults.slice(0, 10),
+        fineTop: fineResults.slice(0, 10),
+        selected: payload,
+      },
+      null,
+      2
+    ),
+    "utf8"
+  );
+  console.log("best", payload);
 }
 
 main().catch((error) => {
