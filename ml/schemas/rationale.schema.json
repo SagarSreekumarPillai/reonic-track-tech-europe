@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DesignRationale",
+  "type": "object",
+  "required": [
+    "pvReason",
+    "batteryReason",
+    "heatPumpReason",
+    "tradeoffSummary",
+    "assumptions"
+  ],
+  "properties": {
+    "pvReason": { "type": "string", "minLength": 12 },
+    "batteryReason": { "type": "string", "minLength": 12 },
+    "heatPumpReason": { "type": "string", "minLength": 12 },
+    "tradeoffSummary": { "type": "string", "minLength": 12 },
+    "assumptions": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 3 },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}
