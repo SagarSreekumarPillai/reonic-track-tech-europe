@@ -1,0 +1,368 @@
+{
+  "generatedAt": "2026-04-26T07:15:46.401Z",
+  "seeds": [
+    11,
+    37,
+    73
+  ],
+  "coarseTop": [
+    {
+      "weights": {
+        "objectivePrior": 0.12,
+        "familyPrior": 0.16,
+        "bundleBoost": 2.2,
+        "coOccurrence": 0.006,
+        "predictor": 0.6
+      },
+      "meanF1": 0.44063454315979605,
+      "perSeed": [
+        0.4421002748654266,
+        0.42518896647684584,
+        0.4546143881371158
+      ],
+      "variance": 0.000145383424697226,
+      "robustScore": 0.43641441644067847
+    },
+    {
+      "weights": {
+        "objectivePrior": 0.12,
+        "familyPrior": 0.16,
+        "bundleBoost": 2.2,
+        "coOccurrence": 0.006,
+        "predictor": 0.75
+      },
+      "meanF1": 0.44063454315979605,
+      "perSeed": [
+        0.4421002748654266,
+        0.42518896647684584,
+        0.4546143881371158
+      ],
+      "variance": 0.000145383424697226,
+      "robustScore": 0.43641441644067847
+    },
+    {
+      "weights": {
+        "objectivePrior": 0.12,
+        "familyPrior": 0.16,
+        "bundleBoost": 2.2,
+        "coOccurrence": 0.006,
+        "predictor": 0.9
+      },
+      "meanF1": 0.44063454315979605,
+      "perSeed": [
+        0.4421002748654266,
+        0.42518896647684584,
+        0.4546143881371158
+      ],
+      "variance": 0.000145383424697226,
+      "robustScore": 0.43641441644067847
+    },
+    {
+      "weights": {
+        "objectivePrior": 0.12,
+        "familyPrior": 0.16,
+        "bundleBoost": 2.6,
+        "coOccurrence": 0.006,
+        "predictor": 0.6
+      },
+      "meanF1": 0.44063454315979605,
+      "perSeed": [
+        0.4421002748654266,
+        0.42518896647684584,
+        0.4546143881371158
+      ],
+      "variance": 0.000145383424697226,
+      "robustScore": 0.43641441644067847
+    },
+    {
+      "weights": {
+        "objectivePrior": 0.12,
+        "familyPrior": 0.16,
+        "bundleBoost": 2.6,
+        "coOccurrence": 0.006,
+        "predictor": 0.75
+      },
+      "meanF1": 0.44063454315979605,
+      "perSeed": [
+        0.4421002748654266,
+        0.42518896647684584,
+        0.4546143881371158
+      ],
+      "variance": 0.000145383424697226,
+      "robustScore": 0.43641441644067847
+    },
+    {
+      "weights": {
+        "objectivePrior": 0.12,
+        "familyPrior": 0.16,
+        "bundleBoost": 2.6,
+        "coOccurrence": 0.006,
+        "predictor": 0.9
+      },
+      "meanF1": 0.44063454315979605,
+      "perSeed": [
+        0.4421002748654266,
+        0.42518896647684584,
+        0.4546143881371158
+      ],
+      "variance": 0.000145383424697226,
+      "robustScore": 0.43641441644067847
+    },
+    {
+      "weights": {
+        "objectivePrior": 0.12,
+        "familyPrior": 0.16,
+        "bundleBoost": 2.6,
+        "coOccurrence": 0.006,
+        "predictor": 1.05
+      },
+      "meanF1": 0.44063454315979605,
+      "perSeed": [
+        0.4421002748654266,
+        0.42518896647684584,
+        0.4546143881371158
+      ],
+      "variance": 0.000145383424697226,
+      "robustScore": 0.43641441644067847
+    },
+    {
+      "weights": {
+        "objectivePrior": 0.12,
+        "familyPrior": 0.22,
+        "bundleBoost": 2.6,
+        "coOccurrence": 0.006,
+        "predictor": 0.6
+      },
+      "meanF1": 0.44063454315979605,
+      "perSeed": [
+        0.4421002748654266,
+        0.42518896647684584,
+        0.4546143881371158
+      ],
+      "variance": 0.000145383424697226,
+      "robustScore": 0.43641441644067847
+    },
+    {
+      "weights": {
+        "objectivePrior": 0.12,
+        "familyPrior": 0.22,
+        "bundleBoost": 2.6,
+        "coOccurrence": 0.006,
+        "predictor": 0.75
+      },
+      "meanF1": 0.44063454315979605,
+      "perSeed": [
+        0.4421002748654266,
+        0.42518896647684584,
+        0.4546143881371158
+      ],
+      "variance": 0.000145383424697226,
+      "robustScore": 0.43641441644067847
+    },
+    {
+      "weights": {
+        "objectivePrior": 0.12,
+        "familyPrior": 0.22,
+        "bundleBoost": 2.6,
+        "coOccurrence": 0.006,
+        "predictor": 0.9
+      },
+      "meanF1": 0.44063454315979605,
+      "perSeed": [
+        0.4421002748654266,
+        0.42518896647684584,
+        0.4546143881371158
+      ],
+      "variance": 0.000145383424697226,
+      "robustScore": 0.43641441644067847
+    }
+  ],
+  "fineTop": [
+    {
+      "weights": {
+        "objectivePrior": 0.09,
+        "familyPrior": 0.13,
+        "bundleBoost": 1.9,
+        "coOccurrence": 0.003,
+        "predictor": 1
+      },
+      "meanF1": 0.440892807622606,
+      "perSeed": [
+        0.44273158799673973,
+        0.4253324467339625,
+        0.4546143881371158
+      ],
+      "variance": 0.00014459590535510045,
+      "robustScore": 0.4366841263082274
+    },
+    {
+      "weights": {
+        "objectivePrior": 0.09,
+        "familyPrior": 0.13,
+        "bundleBoost": 1.9,
+        "coOccurrence": 0.003,
+        "predictor": 0.7
+      },
+      "meanF1": 0.44078758876738716,
+      "perSeed": [
+        0.4421002748654266,
+        0.42564810329961905,
+        0.4546143881371158
+      ],
+      "variance": 0.00014070251527715868,
+      "robustScore": 0.43663595558014
+    },
+    {
+      "weights": {
+        "objectivePrior": 0.09,
+        "familyPrior": 0.13,
+        "bundleBoost": 1.9,
+        "coOccurrence": 0.003,
+        "predictor": 0.75
+      },
+      "meanF1": 0.44078758876738716,
+      "perSeed": [
+        0.4421002748654266,
+        0.42564810329961905,
+        0.4546143881371158
+      ],
+      "variance": 0.00014070251527715868,
+      "robustScore": 0.43663595558014
+    },
+    {
+      "weights": {
+        "objectivePrior": 0.09,
+        "familyPrior": 0.13,
+        "bundleBoost": 2.2,
+        "coOccurrence": 0.003,
+        "predictor": 0.75
+      },
+      "meanF1": 0.44078758876738716,
+      "perSeed": [
+        0.4421002748654266,
+        0.42564810329961905,
+        0.4546143881371158
+      ],
+      "variance": 0.00014070251527715868,
+      "robustScore": 0.43663595558014
+    },
+    {
+      "weights": {
+        "objectivePrior": 0.09,
+        "familyPrior": 0.13,
+        "bundleBoost": 1.9,
+        "coOccurrence": 0.003,
+        "predictor": 0.85
+      },
+      "meanF1": 0.4406823699121683,
+      "perSeed": [
+        0.4421002748654266,
+        0.4253324467339625,
+        0.4546143881371158
+      ],
+      "variance": 0.000143910575951188,
+      "robustScore": 0.4364836742154048
+    },
+    {
+      "weights": {
+        "objectivePrior": 0.09,
+        "familyPrior": 0.13,
+        "bundleBoost": 2.2,
+        "coOccurrence": 0.003,
+        "predictor": 0.85
+      },
+      "meanF1": 0.4406823699121683,
+      "perSeed": [
+        0.4421002748654266,
+        0.4253324467339625,
+        0.4546143881371158
+      ],
+      "variance": 0.000143910575951188,
+      "robustScore": 0.4364836742154048
+    },
+    {
+      "weights": {
+        "objectivePrior": 0.09,
+        "familyPrior": 0.13,
+        "bundleBoost": 2.5,
+        "coOccurrence": 0.003,
+        "predictor": 0.85
+      },
+      "meanF1": 0.4406823699121683,
+      "perSeed": [
+        0.4421002748654266,
+        0.4253324467339625,
+        0.4546143881371158
+      ],
+      "variance": 0.000143910575951188,
+      "robustScore": 0.4364836742154048
+    },
+    {
+      "weights": {
+        "objectivePrior": 0.09,
+        "familyPrior": 0.16,
+        "bundleBoost": 1.9,
+        "coOccurrence": 0.003,
+        "predictor": 0.85
+      },
+      "meanF1": 0.4406823699121683,
+      "perSeed": [
+        0.4421002748654266,
+        0.4253324467339625,
+        0.4546143881371158
+      ],
+      "variance": 0.000143910575951188,
+      "robustScore": 0.4364836742154048
+    },
+    {
+      "weights": {
+        "objectivePrior": 0.09,
+        "familyPrior": 0.13,
+        "bundleBoost": 1.9,
+        "coOccurrence": 0.003,
+        "predictor": 0.8
+      },
+      "meanF1": 0.4406823699121683,
+      "perSeed": [
+        0.4421002748654266,
+        0.4253324467339625,
+        0.4546143881371158
+      ],
+      "variance": 0.000143910575951188,
+      "robustScore": 0.4364836742154048
+    },
+    {
+      "weights": {
+        "objectivePrior": 0.09,
+        "familyPrior": 0.13,
+        "bundleBoost": 1.9,
+        "coOccurrence": 0.003,
+        "predictor": 0.9
+      },
+      "meanF1": 0.4406823699121683,
+      "perSeed": [
+        0.4421002748654266,
+        0.4253324467339625,
+        0.4546143881371158
+      ],
+      "variance": 0.000143910575951188,
+      "robustScore": 0.4364836742154048
+    }
+  ],
+  "selected": {
+    "objectivePrior": 0.09,
+    "familyPrior": 0.13,
+    "bundleBoost": 1.9,
+    "coOccurrence": 0.003,
+    "predictor": 1,
+    "meanF1": 0.440892807622606,
+    "robustScore": 0.4366841263082274,
+    "variance": 0.00014459590535510045,
+    "perSeed": [
+      0.44273158799673973,
+      0.4253324467339625,
+      0.4546143881371158
+    ],
+    "method": "two_stage_grid_with_seed_stability"
+  }
+}
