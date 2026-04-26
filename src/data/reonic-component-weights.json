@@ -1,8 +1,16 @@
 {
-  "objectivePrior": 0.18,
-  "familyPrior": 0.24,
-  "bundleBoost": 1.8,
-  "coOccurrence": 0.015,
-  "predictor": 0.7,
-  "meanF1": 0.44928756709059786
+  "objectivePrior": 0.09,
+  "familyPrior": 0.13,
+  "bundleBoost": 1.9,
+  "coOccurrence": 0.003,
+  "predictor": 1,
+  "meanF1": 0.440892807622606,
+  "robustScore": 0.4366841263082274,
+  "variance": 0.00014459590535510045,
+  "perSeed": [
+    0.44273158799673973,
+    0.4253324467339625,
+    0.4546143881371158
+  ],
+  "method": "two_stage_grid_with_seed_stability"
 }
