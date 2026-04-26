@@ -32,6 +32,7 @@
     "@loaders.gl/core": "^4.4.1",
     "@loaders.gl/gltf": "^4.4.1",
     "@supabase/supabase-js": "^2.104.1",
+    "jspdf": "^3.0.4",
     "next": "16.2.4",
     "pg": "^8.20.0",
     "react": "19.2.4",
