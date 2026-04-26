@@ -2,6 +2,9 @@ import fs from "node:fs/promises";
 import path from "node:path";
 
 const INPUT_FILE = path.resolve("src/data/reonic-training-dataset.json");
+const COMPONENT_MODEL_FILE = path.resolve("src/data/reonic-component-model.json");
+const COMPONENT_PREDICTOR_FILE = path.resolve("src/data/reonic-component-predictor.json");
+const COMPONENT_WEIGHTS_FILE = path.resolve("src/data/reonic-component-weights.json");
 const OUT_FILE = path.resolve("ml/data/reonic_recommender_eval.json");
 
 function f1ComponentOverlap(predicted, truth) {
@@ -15,7 +18,98 @@ function f1ComponentOverlap(predicted, truth) {
   return (2 * precision * recall) / (precision + recall);
 }
 
-function predict(rows, sample) {
+function aggregateComponents(nearest, objective, family, componentModel, componentWeights) {
+  const scores = new Map();
+  for (let i = 0; i < Math.min(nearest.length, 10); i += 1) {
+    const row = nearest[i];
+    const weight = 1 / (0.2 + i * 0.15);
+    for (const component of row.offer.components ?? []) {
+      const key = String(component).trim();
+      if (!key) continue;
+      scores.set(key, (scores.get(key) ?? 0) + weight);
+    }
+  }
+  const objectivePriors = componentModel.byObjective?.[objective] ?? [];
+  for (const item of objectivePriors.slice(0, 18)) {
+    scores.set(
+      item.component,
+      (scores.get(item.component) ?? 0) + item.count * componentWeights.objectivePrior
+    );
+  }
+  const familyPriors = componentModel.byFamily?.[family] ?? [];
+  for (const item of familyPriors.slice(0, 18)) {
+    scores.set(
+      item.component,
+      (scores.get(item.component) ?? 0) + item.count * componentWeights.familyPrior
+    );
+  }
+
+  const provisional = [...scores.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10)
+    .map(([name]) => String(name).toLowerCase());
+
+  const bundles = componentModel.byFamilyBundles?.[family] ?? [];
+  let bestBundle = null;
+  let bestScore = -1;
+  for (const bundle of bundles.slice(0, 6)) {
+    const setA = new Set(provisional);
+    const setB = new Set(bundle.components.map((x) => String(x).toLowerCase()));
+    const overlap = [...setA].filter((x) => setB.has(x)).length;
+    const union = new Set([...setA, ...setB]).size;
+    const jaccard = union > 0 ? overlap / union : 0;
+    const weighted = jaccard + bundle.count * 0.005;
+    if (weighted > bestScore) {
+      bestScore = weighted;
+      bestBundle = bundle.components;
+    }
+  }
+  if (bestBundle) {
+    for (const c of bestBundle) {
+      scores.set(c, (scores.get(c) ?? 0) + componentWeights.bundleBoost);
+    }
+  }
+
+  const topSet = new Set(
+    [...scores.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 6)
+      .map(([name]) => String(name).toLowerCase())
+  );
+  for (const pair of (componentModel.topCoOccurrencePairs ?? []).slice(0, 100)) {
+    const aIn = topSet.has(pair.a);
+    const bIn = topSet.has(pair.b);
+    if (aIn && !bIn) {
+      scores.set(
+        pair.b,
+        (scores.get(pair.b) ?? 0) + pair.count * componentWeights.coOccurrence
+      );
+    } else if (!aIn && bIn) {
+      scores.set(
+        pair.a,
+        (scores.get(pair.a) ?? 0) + pair.count * componentWeights.coOccurrence
+      );
+    }
+  }
+
+  return [...scores.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 8)
+    .map(([k]) => k);
+}
+
+function gaussianScore(x, centroid, spread) {
+  const len = Math.min(x.length, centroid.length, spread.length);
+  let score = 0;
+  for (let i = 0; i < len; i += 1) {
+    const sigma = Math.max(0.05, spread[i]);
+    const z = (x[i] - centroid[i]) / sigma;
+    score += z * z;
+  }
+  return Math.exp((-0.5 * score) / Math.max(1, len));
+}
+
+function predict(rows, sample, componentModel, componentPredictor, componentWeights) {
   const objective = sample.objectiveHint;
   const distance = (row) => {
     const demand = Math.abs(row.features.annualConsumptionKwh - sample.features.annualConsumptionKwh) / 12000;
@@ -48,7 +142,35 @@ function predict(rows, sample) {
   const offerTop = nearest.slice(0, 6).map((n) => n.offer.code);
   const offerFamilyTop = nearest.slice(0, 6).map((n) => n.offer.title);
   const offerFamilyTop1 = nearest[0]?.offer?.title ?? "";
-  const predictedComponents = nearest[0]?.offer?.components ?? [];
+  const predictedComponents = aggregateComponents(
+    nearest,
+    sample.objectiveHint,
+    offerFamilyTop1,
+    componentModel,
+    componentWeights
+  );
+  const predictorX = [
+    sample.features.annualConsumptionKwh,
+    sample.features.electricityPrice,
+    sample.features.hasEv ? 1 : 0,
+    sample.features.householdSize,
+    sample.objectiveHint === "maximize_savings" ? 1 : 0,
+    sample.objectiveHint === "minimize_upfront" ? 1 : 0,
+    sample.objectiveHint === "maximize_self_consumption" ? 1 : 0,
+    pvPred,
+    batteryPred,
+    modulesPred,
+    heat > 0 ? 1 : 0,
+  ];
+  const merged = new Map(predictedComponents.map((c, i) => [c, 10 - i]));
+  for (const item of componentPredictor.components ?? []) {
+    const s = gaussianScore(predictorX, item.centroid, item.spread) * Math.log1p(item.support);
+    merged.set(item.component, (merged.get(item.component) ?? 0) + s * componentWeights.predictor);
+  }
+  const predictorComponents = [...merged.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 8)
+    .map(([k]) => k);
   return {
     pv: pvPred,
     battery: batteryPred,
@@ -57,7 +179,7 @@ function predict(rows, sample) {
     offerTop,
     offerFamilyTop,
     offerFamilyTop1,
-    predictedComponents,
+    predictedComponents: predictorComponents,
   };
 }
 
@@ -67,6 +189,11 @@ function mean(arr) {
 
 async function main() {
   const dataset = JSON.parse(await fs.readFile(INPUT_FILE, "utf8"));
+  const componentModel = JSON.parse(await fs.readFile(COMPONENT_MODEL_FILE, "utf8"));
+  const componentPredictor = JSON.parse(
+    await fs.readFile(COMPONENT_PREDICTOR_FILE, "utf8")
+  );
+  const componentWeights = JSON.parse(await fs.readFile(COMPONENT_WEIGHTS_FILE, "utf8"));
   const shuffled = [...dataset].sort(() => Math.random() - 0.5);
   const split = Math.floor(shuffled.length * 0.8);
   const train = shuffled.slice(0, split);
@@ -83,7 +210,13 @@ async function main() {
   const componentF1 = [];
 
   for (const sample of test) {
-    const pred = predict(train, sample);
+    const pred = predict(
+      train,
+      sample,
+      componentModel,
+      componentPredictor,
+      componentWeights
+    );
     const pvErr = Math.abs(pred.pv - sample.labels.pvKwp);
     const batErr = Math.abs(pred.battery - sample.labels.batteryKwh);
     pvAbsErr.push(pvErr);

@@ -54,6 +54,27 @@ function normalizeHeating(value) {
   return "other";
 }
 
+function normalizeComponentName(name) {
+  const n = String(name || "").toLowerCase().trim();
+  if (!n) return "other_component";
+  if (n.includes("battery")) return "battery_storage";
+  if (n.includes("inverter")) return "hybrid_inverter";
+  if (n.includes("module")) return "pv_module";
+  if (n.includes("substructure") || n.includes("mounting")) return "mounting_structure";
+  if (n.includes("grid registration")) return "grid_registration";
+  if (n.includes("planning")) return "system_planning";
+  if (n.includes("delivery")) return "delivery_logistics";
+  if (n.includes("wallbox")) return "ev_wallbox";
+  if (n.includes("meter")) return "smart_meter_or_cabinet";
+  if (n.includes("optimizer")) return "power_optimizer";
+  if (n.includes("heatpump")) return "heat_pump";
+  if (n.includes("site setup") || n.includes("safety")) return "site_setup_safety";
+  if (n.includes("electrical installation")) return "electrical_installation";
+  if (n.includes("emergency power gateway")) return "backup_gateway";
+  if (n.includes("consulting")) return "consulting_service";
+  return n.replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
+}
+
 async function readStatusRows() {
   const rows = [];
   for (const file of STATUS_FILES) {
@@ -108,7 +129,7 @@ async function readOptionRows() {
         };
 
       const componentType = r[idx.component_type];
-      const componentName = r[idx.component_name] || "Unknown component";
+      const componentName = normalizeComponentName(r[idx.component_name] || "Unknown component");
       const quantity = toNumber(r[idx.quantity]) || 1;
       const moduleWp = toNumber(r[idx.module_watt_peak]);
       const batteryKwhRaw = toNumber(r[idx.battery_capacity_kwh]);
