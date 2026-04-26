@@ -1,0 +1,8 @@
+{
+  "objectivePrior": 0.18,
+  "familyPrior": 0.24,
+  "bundleBoost": 1.8,
+  "coOccurrence": 0.015,
+  "predictor": 0.7,
+  "meanF1": 0.44928756709059786
+}

@@ -13,6 +13,10 @@
     "reonic:build-priors": "node scripts/reonic/build_recommendation_priors.mjs",
     "reonic:build-training-dataset": "node scripts/reonic/build_training_dataset.mjs",
     "reonic:build-offer-model": "node scripts/reonic/build_offer_model.mjs",
+    "reonic:build-component-model": "node scripts/reonic/build_component_model.mjs",
+    "reonic:build-component-predictor": "node scripts/reonic/build_component_predictor.mjs",
+    "reonic:tune-component-weights": "node scripts/reonic/tune_component_weights.mjs",
+    "reonic:sync-models": "node scripts/reonic/sync_models_to_public.mjs",
     "reonic:evaluate": "node scripts/reonic/evaluate_recommender.mjs",
     "ml:export": "node scripts/ml/export_scenarios.mjs",
     "ml:seed-scenarios": "node scripts/ml/seed_synthetic_scenarios.mjs",
@@ -23,6 +27,7 @@
   "dependencies": {
     "@gltf-transform/core": "^4.3.0",
     "@google/generative-ai": "^0.24.1",
+    "@google/model-viewer": "^4.2.0",
     "@hookform/resolvers": "^5.2.2",
     "@loaders.gl/core": "^4.4.1",
     "@loaders.gl/gltf": "^4.4.1",

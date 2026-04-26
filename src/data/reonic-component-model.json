@@ -1,0 +1,3500 @@
+{
+  "generatedAt": "2026-04-26T06:12:58.973Z",
+  "globalTop": [
+    {
+      "component": "battery_storage",
+      "count": 1371
+    },
+    {
+      "component": "mounting_structure",
+      "count": 1047
+    },
+    {
+      "component": "system_planning",
+      "count": 841
+    },
+    {
+      "component": "hybrid_inverter",
+      "count": 816
+    },
+    {
+      "component": "smart_meter_or_cabinet",
+      "count": 801
+    },
+    {
+      "component": "travel_logistics_flat_rate",
+      "count": 790
+    },
+    {
+      "component": "scaffolding_setup_removal",
+      "count": 628
+    },
+    {
+      "component": "all_inclusive_package_b",
+      "count": 562
+    },
+    {
+      "component": "ev_wallbox",
+      "count": 411
+    },
+    {
+      "component": "optional_solar_credit",
+      "count": 407
+    },
+    {
+      "component": "dc_install_concrete_tile_roof",
+      "count": 343
+    },
+    {
+      "component": "ac_surge_protection",
+      "count": 291
+    },
+    {
+      "component": "selective_circuit_breaker_sls",
+      "count": 277
+    },
+    {
+      "component": "power_optimizer",
+      "count": 219
+    },
+    {
+      "component": "grid_registration",
+      "count": 203
+    },
+    {
+      "component": "energy_manager_b",
+      "count": 200
+    },
+    {
+      "component": "delivery_logistics",
+      "count": 198
+    },
+    {
+      "component": "site_setup_safety",
+      "count": 197
+    },
+    {
+      "component": "electrical_installation",
+      "count": 191
+    },
+    {
+      "component": "all_inclusive_package",
+      "count": 183
+    },
+    {
+      "component": "optional_pv_insurance",
+      "count": 175
+    },
+    {
+      "component": "dc_install_clay_tile_roof",
+      "count": 175
+    },
+    {
+      "component": "sub_distribution_board",
+      "count": 129
+    },
+    {
+      "component": "equipotential_bonding",
+      "count": 128
+    },
+    {
+      "component": "travel_logistics_flat_rate_extension",
+      "count": 118
+    },
+    {
+      "component": "smart_guard_63a",
+      "count": 115
+    },
+    {
+      "component": "pv_module",
+      "count": 107
+    },
+    {
+      "component": "energy_management_system",
+      "count": 103
+    },
+    {
+      "component": "apz_field",
+      "count": 97
+    },
+    {
+      "component": "dc_install_flat_roof",
+      "count": 93
+    }
+  ],
+  "byFamily": {
+    "Reonic Variant 1": [
+      {
+        "component": "battery_storage",
+        "count": 730
+      },
+      {
+        "component": "mounting_structure",
+        "count": 524
+      },
+      {
+        "component": "system_planning",
+        "count": 416
+      },
+      {
+        "component": "hybrid_inverter",
+        "count": 415
+      },
+      {
+        "component": "smart_meter_or_cabinet",
+        "count": 402
+      },
+      {
+        "component": "travel_logistics_flat_rate",
+        "count": 375
+      },
+      {
+        "component": "scaffolding_setup_removal",
+        "count": 296
+      },
+      {
+        "component": "all_inclusive_package_b",
+        "count": 258
+      },
+      {
+        "component": "ev_wallbox",
+        "count": 213
+      },
+      {
+        "component": "optional_solar_credit",
+        "count": 187
+      },
+      {
+        "component": "ac_surge_protection",
+        "count": 156
+      },
+      {
+        "component": "dc_install_concrete_tile_roof",
+        "count": 148
+      },
+      {
+        "component": "selective_circuit_breaker_sls",
+        "count": 147
+      },
+      {
+        "component": "grid_registration",
+        "count": 124
+      },
+      {
+        "component": "delivery_logistics",
+        "count": 122
+      },
+      {
+        "component": "site_setup_safety",
+        "count": 121
+      },
+      {
+        "component": "electrical_installation",
+        "count": 119
+      },
+      {
+        "component": "power_optimizer",
+        "count": 116
+      },
+      {
+        "component": "energy_manager_b",
+        "count": 111
+      },
+      {
+        "component": "all_inclusive_package",
+        "count": 98
+      },
+      {
+        "component": "dc_install_clay_tile_roof",
+        "count": 92
+      },
+      {
+        "component": "optional_pv_insurance",
+        "count": 83
+      },
+      {
+        "component": "travel_logistics_flat_rate_extension",
+        "count": 78
+      },
+      {
+        "component": "equipotential_bonding",
+        "count": 69
+      },
+      {
+        "component": "all_inclusive_package_extension",
+        "count": 61
+      }
+    ],
+    "Reonic Variant 2": [
+      {
+        "component": "battery_storage",
+        "count": 305
+      },
+      {
+        "component": "mounting_structure",
+        "count": 235
+      },
+      {
+        "component": "system_planning",
+        "count": 196
+      },
+      {
+        "component": "travel_logistics_flat_rate",
+        "count": 177
+      },
+      {
+        "component": "smart_meter_or_cabinet",
+        "count": 173
+      },
+      {
+        "component": "hybrid_inverter",
+        "count": 172
+      },
+      {
+        "component": "scaffolding_setup_removal",
+        "count": 144
+      },
+      {
+        "component": "all_inclusive_package_b",
+        "count": 134
+      },
+      {
+        "component": "optional_solar_credit",
+        "count": 113
+      },
+      {
+        "component": "dc_install_concrete_tile_roof",
+        "count": 82
+      },
+      {
+        "component": "ev_wallbox",
+        "count": 75
+      },
+      {
+        "component": "ac_surge_protection",
+        "count": 64
+      },
+      {
+        "component": "selective_circuit_breaker_sls",
+        "count": 58
+      },
+      {
+        "component": "optional_pv_insurance",
+        "count": 55
+      },
+      {
+        "component": "grid_registration",
+        "count": 51
+      },
+      {
+        "component": "site_setup_safety",
+        "count": 48
+      },
+      {
+        "component": "delivery_logistics",
+        "count": 47
+      },
+      {
+        "component": "electrical_installation",
+        "count": 44
+      },
+      {
+        "component": "energy_manager_b",
+        "count": 42
+      },
+      {
+        "component": "power_optimizer",
+        "count": 39
+      },
+      {
+        "component": "all_inclusive_package",
+        "count": 39
+      },
+      {
+        "component": "dc_install_clay_tile_roof",
+        "count": 31
+      },
+      {
+        "component": "pv_module",
+        "count": 29
+      },
+      {
+        "component": "equipotential_bonding",
+        "count": 26
+      },
+      {
+        "component": "smart_guard_63a",
+        "count": 26
+      }
+    ],
+    "Reonic Variant 3": [
+      {
+        "component": "battery_storage",
+        "count": 146
+      },
+      {
+        "component": "mounting_structure",
+        "count": 123
+      },
+      {
+        "component": "hybrid_inverter",
+        "count": 103
+      },
+      {
+        "component": "travel_logistics_flat_rate",
+        "count": 103
+      },
+      {
+        "component": "system_planning",
+        "count": 95
+      },
+      {
+        "component": "smart_meter_or_cabinet",
+        "count": 84
+      },
+      {
+        "component": "scaffolding_setup_removal",
+        "count": 72
+      },
+      {
+        "component": "all_inclusive_package_b",
+        "count": 66
+      },
+      {
+        "component": "optional_solar_credit",
+        "count": 52
+      },
+      {
+        "component": "ev_wallbox",
+        "count": 50
+      },
+      {
+        "component": "dc_install_concrete_tile_roof",
+        "count": 43
+      },
+      {
+        "component": "ac_surge_protection",
+        "count": 35
+      },
+      {
+        "component": "power_optimizer",
+        "count": 26
+      },
+      {
+        "component": "dc_install_clay_tile_roof",
+        "count": 25
+      },
+      {
+        "component": "selective_circuit_breaker_sls",
+        "count": 24
+      },
+      {
+        "component": "energy_manager_b",
+        "count": 23
+      },
+      {
+        "component": "optional_pv_insurance",
+        "count": 21
+      },
+      {
+        "component": "pv_module",
+        "count": 19
+      },
+      {
+        "component": "sub_distribution_board",
+        "count": 19
+      },
+      {
+        "component": "all_inclusive_package",
+        "count": 16
+      },
+      {
+        "component": "site_setup_safety",
+        "count": 15
+      },
+      {
+        "component": "grid_registration",
+        "count": 15
+      },
+      {
+        "component": "smart_guard_63a",
+        "count": 15
+      },
+      {
+        "component": "delivery_logistics",
+        "count": 14
+      },
+      {
+        "component": "electrical_installation",
+        "count": 13
+      }
+    ],
+    "Reonic Variant 6": [
+      {
+        "component": "battery_storage",
+        "count": 22
+      },
+      {
+        "component": "smart_meter_or_cabinet",
+        "count": 19
+      },
+      {
+        "component": "mounting_structure",
+        "count": 16
+      },
+      {
+        "component": "system_planning",
+        "count": 16
+      },
+      {
+        "component": "travel_logistics_flat_rate",
+        "count": 15
+      },
+      {
+        "component": "all_inclusive_package_b",
+        "count": 13
+      },
+      {
+        "component": "scaffolding_setup_removal",
+        "count": 13
+      },
+      {
+        "component": "hybrid_inverter",
+        "count": 12
+      },
+      {
+        "component": "dc_install_concrete_tile_roof",
+        "count": 12
+      },
+      {
+        "component": "ev_wallbox",
+        "count": 10
+      },
+      {
+        "component": "ac_surge_protection",
+        "count": 5
+      },
+      {
+        "component": "optional_solar_credit",
+        "count": 5
+      },
+      {
+        "component": "power_optimizer",
+        "count": 4
+      },
+      {
+        "component": "energy_management_system",
+        "count": 4
+      },
+      {
+        "component": "dc_install_clay_tile_roof",
+        "count": 3
+      },
+      {
+        "component": "energy_manager_b",
+        "count": 3
+      },
+      {
+        "component": "all_inclusive_package",
+        "count": 3
+      },
+      {
+        "component": "ac_installation_package",
+        "count": 3
+      },
+      {
+        "component": "smart_heating_controller",
+        "count": 3
+      },
+      {
+        "component": "heat_pump_hydraulic_station",
+        "count": 3
+      },
+      {
+        "component": "complete_package_2_sigenergy_10_8kwp_9kwh_b",
+        "count": 2
+      },
+      {
+        "component": "backup_gateway",
+        "count": 2
+      },
+      {
+        "component": "complete_package_3_sigenergy_13_5kwp_9kwh_c",
+        "count": 2
+      },
+      {
+        "component": "pv_module",
+        "count": 2
+      },
+      {
+        "component": "smart_guard_63a",
+        "count": 2
+      }
+    ],
+    "Reonic Variant 8": [
+      {
+        "component": "battery_storage",
+        "count": 10
+      },
+      {
+        "component": "mounting_structure",
+        "count": 10
+      },
+      {
+        "component": "scaffolding_setup_removal",
+        "count": 9
+      },
+      {
+        "component": "system_planning",
+        "count": 8
+      },
+      {
+        "component": "travel_logistics_flat_rate",
+        "count": 7
+      },
+      {
+        "component": "smart_meter_or_cabinet",
+        "count": 7
+      },
+      {
+        "component": "hybrid_inverter",
+        "count": 6
+      },
+      {
+        "component": "all_inclusive_package_b",
+        "count": 5
+      },
+      {
+        "component": "ev_wallbox",
+        "count": 4
+      },
+      {
+        "component": "all_inclusive_package",
+        "count": 4
+      },
+      {
+        "component": "sub_distribution_board",
+        "count": 4
+      },
+      {
+        "component": "ac_surge_protection",
+        "count": 3
+      },
+      {
+        "component": "selective_circuit_breaker_sls",
+        "count": 3
+      },
+      {
+        "component": "dc_install_concrete_tile_roof",
+        "count": 2
+      },
+      {
+        "component": "dc_install_concrete_roof",
+        "count": 2
+      },
+      {
+        "component": "smart_guard_63a",
+        "count": 2
+      },
+      {
+        "component": "hot_water_storage_300l",
+        "count": 2
+      },
+      {
+        "component": "dc_install_clay_tile_roof",
+        "count": 2
+      },
+      {
+        "component": "garden_work_small_b",
+        "count": 2
+      },
+      {
+        "component": "smart_heating_controller",
+        "count": 2
+      },
+      {
+        "component": "heat_pump_hydraulic_station",
+        "count": 2
+      },
+      {
+        "component": "optional_solar_credit",
+        "count": 2
+      },
+      {
+        "component": "pv_module",
+        "count": 1
+      },
+      {
+        "component": "electrical_installation",
+        "count": 1
+      },
+      {
+        "component": "site_setup_safety",
+        "count": 1
+      }
+    ],
+    "Reonic Variant 4": [
+      {
+        "component": "battery_storage",
+        "count": 81
+      },
+      {
+        "component": "mounting_structure",
+        "count": 75
+      },
+      {
+        "component": "system_planning",
+        "count": 59
+      },
+      {
+        "component": "travel_logistics_flat_rate",
+        "count": 59
+      },
+      {
+        "component": "hybrid_inverter",
+        "count": 58
+      },
+      {
+        "component": "smart_meter_or_cabinet",
+        "count": 55
+      },
+      {
+        "component": "scaffolding_setup_removal",
+        "count": 49
+      },
+      {
+        "component": "all_inclusive_package_b",
+        "count": 44
+      },
+      {
+        "component": "ev_wallbox",
+        "count": 33
+      },
+      {
+        "component": "dc_install_concrete_tile_roof",
+        "count": 25
+      },
+      {
+        "component": "optional_solar_credit",
+        "count": 25
+      },
+      {
+        "component": "power_optimizer",
+        "count": 16
+      },
+      {
+        "component": "selective_circuit_breaker_sls",
+        "count": 16
+      },
+      {
+        "component": "energy_manager_b",
+        "count": 13
+      },
+      {
+        "component": "sub_distribution_board",
+        "count": 12
+      },
+      {
+        "component": "dc_install_clay_tile_roof",
+        "count": 12
+      },
+      {
+        "component": "ac_surge_protection",
+        "count": 11
+      },
+      {
+        "component": "electrical_installation",
+        "count": 10
+      },
+      {
+        "component": "delivery_logistics",
+        "count": 10
+      },
+      {
+        "component": "all_inclusive_package",
+        "count": 10
+      },
+      {
+        "component": "equipotential_bonding",
+        "count": 10
+      },
+      {
+        "component": "travel_logistics_flat_rate_extension",
+        "count": 9
+      },
+      {
+        "component": "grid_registration",
+        "count": 8
+      },
+      {
+        "component": "site_setup_safety",
+        "count": 8
+      },
+      {
+        "component": "dc_install_concrete_roof_30",
+        "count": 8
+      }
+    ],
+    "Reonic Variant 5": [
+      {
+        "component": "battery_storage",
+        "count": 44
+      },
+      {
+        "component": "smart_meter_or_cabinet",
+        "count": 35
+      },
+      {
+        "component": "mounting_structure",
+        "count": 31
+      },
+      {
+        "component": "travel_logistics_flat_rate",
+        "count": 31
+      },
+      {
+        "component": "hybrid_inverter",
+        "count": 29
+      },
+      {
+        "component": "system_planning",
+        "count": 27
+      },
+      {
+        "component": "scaffolding_setup_removal",
+        "count": 25
+      },
+      {
+        "component": "all_inclusive_package_b",
+        "count": 22
+      },
+      {
+        "component": "dc_install_concrete_tile_roof",
+        "count": 17
+      },
+      {
+        "component": "ev_wallbox",
+        "count": 16
+      },
+      {
+        "component": "selective_circuit_breaker_sls",
+        "count": 15
+      },
+      {
+        "component": "optional_solar_credit",
+        "count": 14
+      },
+      {
+        "component": "power_optimizer",
+        "count": 11
+      },
+      {
+        "component": "energy_management_system",
+        "count": 8
+      },
+      {
+        "component": "ac_surge_protection",
+        "count": 7
+      },
+      {
+        "component": "all_inclusive_package",
+        "count": 7
+      },
+      {
+        "component": "energy_manager_b",
+        "count": 6
+      },
+      {
+        "component": "sub_distribution_board",
+        "count": 6
+      },
+      {
+        "component": "pv_module",
+        "count": 5
+      },
+      {
+        "component": "dc_install_flat_roof",
+        "count": 5
+      },
+      {
+        "component": "equipotential_bonding",
+        "count": 5
+      },
+      {
+        "component": "apz_field",
+        "count": 4
+      },
+      {
+        "component": "dc_install_clay_tile_roof",
+        "count": 4
+      },
+      {
+        "component": "electrical_installation",
+        "count": 3
+      },
+      {
+        "component": "site_setup_safety",
+        "count": 3
+      }
+    ],
+    "Reonic Variant 7": [
+      {
+        "component": "battery_storage",
+        "count": 20
+      },
+      {
+        "component": "mounting_structure",
+        "count": 19
+      },
+      {
+        "component": "smart_meter_or_cabinet",
+        "count": 17
+      },
+      {
+        "component": "hybrid_inverter",
+        "count": 14
+      },
+      {
+        "component": "all_inclusive_package_b",
+        "count": 14
+      },
+      {
+        "component": "scaffolding_setup_removal",
+        "count": 13
+      },
+      {
+        "component": "system_planning",
+        "count": 13
+      },
+      {
+        "component": "travel_logistics_flat_rate",
+        "count": 12
+      },
+      {
+        "component": "dc_install_concrete_tile_roof",
+        "count": 7
+      },
+      {
+        "component": "selective_circuit_breaker_sls",
+        "count": 7
+      },
+      {
+        "component": "ac_surge_protection",
+        "count": 5
+      },
+      {
+        "component": "optional_solar_credit",
+        "count": 5
+      },
+      {
+        "component": "sub_distribution_board",
+        "count": 5
+      },
+      {
+        "component": "ev_wallbox",
+        "count": 5
+      },
+      {
+        "component": "smart_guard_63a",
+        "count": 4
+      },
+      {
+        "component": "energy_management_system",
+        "count": 4
+      },
+      {
+        "component": "equipotential_bonding",
+        "count": 4
+      },
+      {
+        "component": "dc_install_clay_tile_roof",
+        "count": 4
+      },
+      {
+        "component": "pv_module",
+        "count": 2
+      },
+      {
+        "component": "power_optimizer",
+        "count": 2
+      },
+      {
+        "component": "energy_manager_b",
+        "count": 2
+      },
+      {
+        "component": "use_of_universal_metal_tiles",
+        "count": 2
+      },
+      {
+        "component": "use_of_flat_ventilation_tile",
+        "count": 2
+      },
+      {
+        "component": "apz_field",
+        "count": 2
+      },
+      {
+        "component": "all_inclusive_package",
+        "count": 2
+      }
+    ],
+    "Reonic Variant 10": [
+      {
+        "component": "battery_storage",
+        "count": 5
+      },
+      {
+        "component": "ac_surge_protection",
+        "count": 4
+      },
+      {
+        "component": "selective_circuit_breaker_sls",
+        "count": 4
+      },
+      {
+        "component": "smart_meter_or_cabinet",
+        "count": 4
+      },
+      {
+        "component": "ev_wallbox",
+        "count": 3
+      },
+      {
+        "component": "dc_install_concrete_tile_roof",
+        "count": 3
+      },
+      {
+        "component": "system_planning",
+        "count": 3
+      },
+      {
+        "component": "heat_pump_installation_compact_b",
+        "count": 3
+      },
+      {
+        "component": "garden_work_small_b",
+        "count": 3
+      },
+      {
+        "component": "smart_heating_controller",
+        "count": 3
+      },
+      {
+        "component": "heat_pump_hydraulic_station",
+        "count": 3
+      },
+      {
+        "component": "all_inclusive_package_b",
+        "count": 2
+      },
+      {
+        "component": "hybrid_inverter",
+        "count": 2
+      },
+      {
+        "component": "smart_guard_63a",
+        "count": 2
+      },
+      {
+        "component": "all_inclusive_package",
+        "count": 2
+      },
+      {
+        "component": "optional_solar_credit",
+        "count": 2
+      },
+      {
+        "component": "energy_management_system",
+        "count": 2
+      },
+      {
+        "component": "mounting_structure",
+        "count": 2
+      },
+      {
+        "component": "travel_logistics_flat_rate",
+        "count": 2
+      },
+      {
+        "component": "sub_distribution_board",
+        "count": 2
+      },
+      {
+        "component": "hot_water_storage_300l",
+        "count": 2
+      },
+      {
+        "component": "buffer_storage_200l",
+        "count": 2
+      },
+      {
+        "component": "pv_module",
+        "count": 1
+      },
+      {
+        "component": "ev_charger_b",
+        "count": 1
+      },
+      {
+        "component": "equipotential_bonding",
+        "count": 1
+      }
+    ],
+    "Reonic Variant 9": [
+      {
+        "component": "mounting_structure",
+        "count": 6
+      },
+      {
+        "component": "system_planning",
+        "count": 5
+      },
+      {
+        "component": "battery_storage",
+        "count": 4
+      },
+      {
+        "component": "travel_logistics_flat_rate",
+        "count": 4
+      },
+      {
+        "component": "all_inclusive_package_b",
+        "count": 3
+      },
+      {
+        "component": "dc_install_concrete_tile_roof",
+        "count": 3
+      },
+      {
+        "component": "hybrid_inverter",
+        "count": 3
+      },
+      {
+        "component": "smart_meter_or_cabinet",
+        "count": 2
+      },
+      {
+        "component": "scaffolding_setup_removal_quote",
+        "count": 2
+      },
+      {
+        "component": "power_optimizer",
+        "count": 2
+      },
+      {
+        "component": "scaffolding_setup_removal",
+        "count": 2
+      },
+      {
+        "component": "ev_wallbox",
+        "count": 1
+      },
+      {
+        "component": "removal_of_roof_steps",
+        "count": 1
+      },
+      {
+        "component": "pv_module",
+        "count": 1
+      },
+      {
+        "component": "energy_manager_pro_2",
+        "count": 1
+      },
+      {
+        "component": "dc_install_concrete_roof",
+        "count": 1
+      },
+      {
+        "component": "optional_pv_insurance",
+        "count": 1
+      },
+      {
+        "component": "sub_distribution_board",
+        "count": 1
+      },
+      {
+        "component": "all_inclusive_package",
+        "count": 1
+      },
+      {
+        "component": "ventilation_tile",
+        "count": 1
+      },
+      {
+        "component": "energy_management_system",
+        "count": 1
+      },
+      {
+        "component": "dc_install_clay_tile_roof",
+        "count": 1
+      },
+      {
+        "component": "automatic_transfer_switch",
+        "count": 1
+      },
+      {
+        "component": "install_emergency_power_box",
+        "count": 1
+      }
+    ],
+    "Reonic Variant 15": [
+      {
+        "component": "ev_wallbox",
+        "count": 1
+      },
+      {
+        "component": "ev_charger_b",
+        "count": 1
+      },
+      {
+        "component": "smart_heating_controller",
+        "count": 1
+      },
+      {
+        "component": "buffer_storage_200l",
+        "count": 1
+      },
+      {
+        "component": "heat_pump_7_5kw_230v",
+        "count": 1
+      },
+      {
+        "component": "hot_water_storage_300l",
+        "count": 1
+      },
+      {
+        "component": "heat_pump_hydraulic_station",
+        "count": 1
+      },
+      {
+        "component": "heat_pump_installation_compact_b",
+        "count": 1
+      },
+      {
+        "component": "garden_work_small_b",
+        "count": 1
+      }
+    ],
+    "Reonic Variant 11": [
+      {
+        "component": "scaffolding_setup_removal",
+        "count": 3
+      },
+      {
+        "component": "mounting_structure",
+        "count": 3
+      },
+      {
+        "component": "travel_logistics_flat_rate",
+        "count": 2
+      },
+      {
+        "component": "battery_storage",
+        "count": 2
+      },
+      {
+        "component": "smart_guard_63a",
+        "count": 2
+      },
+      {
+        "component": "hybrid_inverter",
+        "count": 2
+      },
+      {
+        "component": "energy_manager_pro_2",
+        "count": 1
+      },
+      {
+        "component": "optional_pv_insurance",
+        "count": 1
+      },
+      {
+        "component": "optional_solar_credit",
+        "count": 1
+      },
+      {
+        "component": "all_inclusive_package",
+        "count": 1
+      },
+      {
+        "component": "equipotential_bonding",
+        "count": 1
+      },
+      {
+        "component": "smart_meter_or_cabinet",
+        "count": 1
+      },
+      {
+        "component": "selective_circuit_breaker_sls",
+        "count": 1
+      },
+      {
+        "component": "ac_surge_protection",
+        "count": 1
+      },
+      {
+        "component": "system_planning",
+        "count": 1
+      },
+      {
+        "component": "dc_install_concrete_roof",
+        "count": 1
+      },
+      {
+        "component": "dc_install_clay_tile_roof",
+        "count": 1
+      },
+      {
+        "component": "power_optimizer",
+        "count": 1
+      },
+      {
+        "component": "energy_management_system",
+        "count": 1
+      },
+      {
+        "component": "all_inclusive_package_extension",
+        "count": 1
+      },
+      {
+        "component": "dc_install_flat_roof",
+        "count": 1
+      }
+    ],
+    "Reonic Variant 19": [
+      {
+        "component": "optional_solar_credit",
+        "count": 1
+      },
+      {
+        "component": "travel_logistics_flat_rate",
+        "count": 1
+      },
+      {
+        "component": "dc_install_flat_roof",
+        "count": 1
+      },
+      {
+        "component": "scaffolding_setup_removal",
+        "count": 1
+      },
+      {
+        "component": "mounting_structure",
+        "count": 1
+      },
+      {
+        "component": "all_inclusive_package_b",
+        "count": 1
+      },
+      {
+        "component": "battery_storage",
+        "count": 1
+      },
+      {
+        "component": "smart_meter_or_cabinet",
+        "count": 1
+      }
+    ],
+    "Reonic Variant 12": [
+      {
+        "component": "system_planning",
+        "count": 2
+      },
+      {
+        "component": "travel_logistics_flat_rate",
+        "count": 2
+      },
+      {
+        "component": "use_of_flat_ventilation_tile",
+        "count": 2
+      },
+      {
+        "component": "mounting_structure",
+        "count": 2
+      },
+      {
+        "component": "smart_meter_or_cabinet",
+        "count": 1
+      },
+      {
+        "component": "battery_storage",
+        "count": 1
+      },
+      {
+        "component": "scaffolding_setup_removal",
+        "count": 1
+      },
+      {
+        "component": "smart_guard_63a",
+        "count": 1
+      },
+      {
+        "component": "scaffolding_setup_removal_quote",
+        "count": 1
+      },
+      {
+        "component": "dc_install_concrete_tile_roof",
+        "count": 1
+      },
+      {
+        "component": "energy_management_system",
+        "count": 1
+      },
+      {
+        "component": "energy_manager_c",
+        "count": 1
+      }
+    ],
+    "Reonic Variant 13": [
+      {
+        "component": "smart_heating_controller",
+        "count": 1
+      },
+      {
+        "component": "garden_work_small_b",
+        "count": 1
+      },
+      {
+        "component": "heat_pump_installation_compact_b",
+        "count": 1
+      },
+      {
+        "component": "heat_pump_10_5kw_400v",
+        "count": 1
+      },
+      {
+        "component": "hot_water_storage_300l",
+        "count": 1
+      },
+      {
+        "component": "buffer_storage_200l",
+        "count": 1
+      },
+      {
+        "component": "heat_pump_hydraulic_station",
+        "count": 1
+      }
+    ]
+  },
+  "byObjective": {
+    "maximize_savings": [
+      {
+        "component": "battery_storage",
+        "count": 730
+      },
+      {
+        "component": "mounting_structure",
+        "count": 524
+      },
+      {
+        "component": "system_planning",
+        "count": 416
+      },
+      {
+        "component": "hybrid_inverter",
+        "count": 415
+      },
+      {
+        "component": "smart_meter_or_cabinet",
+        "count": 402
+      },
+      {
+        "component": "travel_logistics_flat_rate",
+        "count": 375
+      },
+      {
+        "component": "scaffolding_setup_removal",
+        "count": 296
+      },
+      {
+        "component": "all_inclusive_package_b",
+        "count": 258
+      },
+      {
+        "component": "ev_wallbox",
+        "count": 213
+      },
+      {
+        "component": "optional_solar_credit",
+        "count": 187
+      },
+      {
+        "component": "ac_surge_protection",
+        "count": 156
+      },
+      {
+        "component": "dc_install_concrete_tile_roof",
+        "count": 148
+      },
+      {
+        "component": "selective_circuit_breaker_sls",
+        "count": 147
+      },
+      {
+        "component": "grid_registration",
+        "count": 124
+      },
+      {
+        "component": "delivery_logistics",
+        "count": 122
+      },
+      {
+        "component": "site_setup_safety",
+        "count": 121
+      },
+      {
+        "component": "electrical_installation",
+        "count": 119
+      },
+      {
+        "component": "power_optimizer",
+        "count": 116
+      },
+      {
+        "component": "energy_manager_b",
+        "count": 111
+      },
+      {
+        "component": "all_inclusive_package",
+        "count": 98
+      },
+      {
+        "component": "dc_install_clay_tile_roof",
+        "count": 92
+      },
+      {
+        "component": "optional_pv_insurance",
+        "count": 83
+      },
+      {
+        "component": "travel_logistics_flat_rate_extension",
+        "count": 78
+      },
+      {
+        "component": "equipotential_bonding",
+        "count": 69
+      },
+      {
+        "component": "all_inclusive_package_extension",
+        "count": 61
+      }
+    ],
+    "minimize_upfront": [
+      {
+        "component": "battery_storage",
+        "count": 305
+      },
+      {
+        "component": "mounting_structure",
+        "count": 235
+      },
+      {
+        "component": "system_planning",
+        "count": 196
+      },
+      {
+        "component": "travel_logistics_flat_rate",
+        "count": 177
+      },
+      {
+        "component": "smart_meter_or_cabinet",
+        "count": 173
+      },
+      {
+        "component": "hybrid_inverter",
+        "count": 172
+      },
+      {
+        "component": "scaffolding_setup_removal",
+        "count": 144
+      },
+      {
+        "component": "all_inclusive_package_b",
+        "count": 134
+      },
+      {
+        "component": "optional_solar_credit",
+        "count": 113
+      },
+      {
+        "component": "dc_install_concrete_tile_roof",
+        "count": 82
+      },
+      {
+        "component": "ev_wallbox",
+        "count": 75
+      },
+      {
+        "component": "ac_surge_protection",
+        "count": 64
+      },
+      {
+        "component": "selective_circuit_breaker_sls",
+        "count": 58
+      },
+      {
+        "component": "optional_pv_insurance",
+        "count": 55
+      },
+      {
+        "component": "grid_registration",
+        "count": 51
+      },
+      {
+        "component": "site_setup_safety",
+        "count": 48
+      },
+      {
+        "component": "delivery_logistics",
+        "count": 47
+      },
+      {
+        "component": "electrical_installation",
+        "count": 44
+      },
+      {
+        "component": "energy_manager_b",
+        "count": 42
+      },
+      {
+        "component": "power_optimizer",
+        "count": 39
+      },
+      {
+        "component": "all_inclusive_package",
+        "count": 39
+      },
+      {
+        "component": "dc_install_clay_tile_roof",
+        "count": 31
+      },
+      {
+        "component": "pv_module",
+        "count": 29
+      },
+      {
+        "component": "equipotential_bonding",
+        "count": 26
+      },
+      {
+        "component": "smart_guard_63a",
+        "count": 26
+      }
+    ],
+    "maximize_self_consumption": [
+      {
+        "component": "battery_storage",
+        "count": 336
+      },
+      {
+        "component": "mounting_structure",
+        "count": 288
+      },
+      {
+        "component": "travel_logistics_flat_rate",
+        "count": 238
+      },
+      {
+        "component": "hybrid_inverter",
+        "count": 229
+      },
+      {
+        "component": "system_planning",
+        "count": 229
+      },
+      {
+        "component": "smart_meter_or_cabinet",
+        "count": 226
+      },
+      {
+        "component": "scaffolding_setup_removal",
+        "count": 188
+      },
+      {
+        "component": "all_inclusive_package_b",
+        "count": 170
+      },
+      {
+        "component": "ev_wallbox",
+        "count": 123
+      },
+      {
+        "component": "dc_install_concrete_tile_roof",
+        "count": 113
+      },
+      {
+        "component": "optional_solar_credit",
+        "count": 107
+      },
+      {
+        "component": "selective_circuit_breaker_sls",
+        "count": 72
+      },
+      {
+        "component": "ac_surge_protection",
+        "count": 71
+      },
+      {
+        "component": "power_optimizer",
+        "count": 64
+      },
+      {
+        "component": "dc_install_clay_tile_roof",
+        "count": 52
+      },
+      {
+        "component": "sub_distribution_board",
+        "count": 50
+      },
+      {
+        "component": "energy_manager_b",
+        "count": 47
+      },
+      {
+        "component": "all_inclusive_package",
+        "count": 46
+      },
+      {
+        "component": "energy_management_system",
+        "count": 39
+      },
+      {
+        "component": "smart_guard_63a",
+        "count": 38
+      },
+      {
+        "component": "pv_module",
+        "count": 37
+      },
+      {
+        "component": "optional_pv_insurance",
+        "count": 37
+      },
+      {
+        "component": "equipotential_bonding",
+        "count": 33
+      },
+      {
+        "component": "delivery_logistics",
+        "count": 29
+      },
+      {
+        "component": "electrical_installation",
+        "count": 28
+      }
+    ]
+  },
+  "byFamilyBundles": {
+    "Reonic Variant 1": [
+      {
+        "components": [
+          "battery_storage"
+        ],
+        "count": 76
+      },
+      {
+        "components": [
+          "all_inclusive_package_extension",
+          "battery_storage",
+          "travel_logistics_flat_rate_extension"
+        ],
+        "count": 37
+      },
+      {
+        "components": [
+          "battery_storage",
+          "delivery_logistics",
+          "electrical_installation",
+          "grid_registration",
+          "mounting_structure",
+          "site_setup_safety"
+        ],
+        "count": 24
+      },
+      {
+        "components": [
+          "ev_wallbox"
+        ],
+        "count": 18
+      },
+      {
+        "components": [
+          "all_inclusive_package_extension_b",
+          "battery_storage",
+          "travel_logistics_flat_rate_extension"
+        ],
+        "count": 11
+      },
+      {
+        "components": [
+          "backup_gateway",
+          "battery_storage",
+          "delivery_logistics",
+          "electrical_installation",
+          "grid_registration",
+          "mounting_structure",
+          "site_setup_safety",
+          "system_planning"
+        ],
+        "count": 10
+      },
+      {
+        "components": [
+          "backup_gateway",
+          "battery_storage",
+          "delivery_logistics",
+          "electrical_installation",
+          "grid_registration",
+          "mounting_structure",
+          "site_setup_safety"
+        ],
+        "count": 8
+      },
+      {
+        "components": [
+          "battery_storage",
+          "delivery_logistics",
+          "electrical_installation",
+          "grid_registration",
+          "mounting_structure",
+          "site_setup_safety",
+          "system_planning"
+        ],
+        "count": 7
+      },
+      {
+        "components": [
+          "all_inclusive_package_extension",
+          "battery_storage"
+        ],
+        "count": 6
+      },
+      {
+        "components": [
+          "battery_storage",
+          "delivery_logistics",
+          "electrical_installation",
+          "ev_wallbox",
+          "grid_registration",
+          "mounting_structure",
+          "site_setup_safety"
+        ],
+        "count": 5
+      }
+    ],
+    "Reonic Variant 2": [
+      {
+        "components": [
+          "battery_storage"
+        ],
+        "count": 20
+      },
+      {
+        "components": [
+          "battery_storage",
+          "delivery_logistics",
+          "electrical_installation",
+          "grid_registration",
+          "mounting_structure",
+          "site_setup_safety"
+        ],
+        "count": 8
+      },
+      {
+        "components": [
+          "all_inclusive_package_extension",
+          "battery_storage",
+          "travel_logistics_flat_rate_extension"
+        ],
+        "count": 8
+      },
+      {
+        "components": [
+          "battery_storage",
+          "delivery_logistics",
+          "electrical_installation",
+          "grid_registration",
+          "hybrid_inverter",
+          "mounting_structure",
+          "pv_module",
+          "site_setup_safety"
+        ],
+        "count": 6
+      },
+      {
+        "components": [
+          "ev_wallbox"
+        ],
+        "count": 5
+      },
+      {
+        "components": [
+          "battery_storage",
+          "delivery_logistics",
+          "electrical_installation",
+          "grid_registration",
+          "mounting_structure",
+          "site_setup_safety",
+          "system_planning"
+        ],
+        "count": 3
+      },
+      {
+        "components": [
+          "battery_storage",
+          "energy_management_system",
+          "pv_complete_package_8kw"
+        ],
+        "count": 3
+      },
+      {
+        "components": [
+          "backup_gateway",
+          "delivery_logistics",
+          "electrical_installation",
+          "equipotential_bonding_rail_new",
+          "grid_registration",
+          "mounting_structure",
+          "site_setup_safety",
+          "system_planning"
+        ],
+        "count": 2
+      },
+      {
+        "components": [
+          "battery_storage",
+          "delivery_logistics",
+          "electrical_installation",
+          "grid_registration",
+          "mounting_structure",
+          "site_setup_safety",
+          "smart_meter_or_cabinet"
+        ],
+        "count": 2
+      },
+      {
+        "components": [
+          "complete_package_2_goodwe_10_8kwp_10kwh",
+          "manual_transfer_switch"
+        ],
+        "count": 2
+      }
+    ],
+    "Reonic Variant 3": [
+      {
+        "components": [
+          "battery_storage"
+        ],
+        "count": 5
+      },
+      {
+        "components": [
+          "all_inclusive_package_extension",
+          "battery_storage",
+          "travel_logistics_flat_rate_extension"
+        ],
+        "count": 3
+      },
+      {
+        "components": [
+          "battery_storage",
+          "delivery_logistics",
+          "electrical_installation",
+          "grid_registration",
+          "mounting_structure",
+          "site_setup_safety"
+        ],
+        "count": 2
+      },
+      {
+        "components": [
+          "all_inclusive_package_b",
+          "battery_storage",
+          "dc_install_concrete_tile_roof",
+          "hybrid_inverter",
+          "mounting_structure",
+          "smart_meter_or_cabinet",
+          "system_planning",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 2
+      },
+      {
+        "components": [
+          "ac_surge_protection",
+          "battery_storage",
+          "dc_install_concrete_tile_roof",
+          "mounting_structure",
+          "scaffolding_setup_removal",
+          "sub_distribution_board",
+          "system_planning",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 2
+      },
+      {
+        "components": [
+          "all_inclusive_package_b",
+          "battery_storage",
+          "mounting_structure",
+          "optional_solar_credit",
+          "scaffolding_setup_removal",
+          "smart_meter_or_cabinet",
+          "system_planning",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 2
+      },
+      {
+        "components": [
+          "battery_storage",
+          "dc_install_clay_tile_roof",
+          "ev_wallbox",
+          "hybrid_inverter",
+          "mounting_structure",
+          "scaffolding_setup_removal",
+          "system_planning",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 2
+      },
+      {
+        "components": [
+          "battery_storage",
+          "complete_package_2_goodwe_10_35kwp_10kwh",
+          "delivery_logistics",
+          "electrical_installation",
+          "grid_registration",
+          "manual_transfer_switch",
+          "mounting_structure",
+          "site_setup_safety"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "backup_gateway",
+          "battery_storage",
+          "complete_package_2_sigenergy_10_8kwp_9kwh_b",
+          "grid_registration",
+          "hybrid_inverter",
+          "mounting_structure",
+          "pv_module",
+          "site_setup_safety"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "backup_gateway",
+          "battery_storage",
+          "delivery_logistics",
+          "grid_registration",
+          "mounting_structure",
+          "site_setup_safety",
+          "smart_meter_or_cabinet"
+        ],
+        "count": 1
+      }
+    ],
+    "Reonic Variant 6": [
+      {
+        "components": [
+          "backup_gateway",
+          "battery_storage",
+          "complete_package_2_sigenergy_10_8kwp_9kwh_b"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "power_optimizer"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "backup_gateway",
+          "battery_storage",
+          "complete_package_3_sigenergy_13_5kwp_9kwh_c",
+          "hybrid_inverter",
+          "pv_module"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "battery_storage",
+          "complete_package_2_sigenergy_10_8kwp_9kwh_b",
+          "manual_transfer_switch",
+          "smart_meter_or_cabinet"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "battery_storage",
+          "complete_package_3_sigenergy_13_5kwp_9kwh_c",
+          "ev_wallbox",
+          "extra_cable_route_1m_ac",
+          "hybrid_inverter",
+          "pv_module",
+          "smart_meter_or_cabinet"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "all_inclusive_package_b",
+          "dc_install_clay_tile_roof",
+          "energy_management_system",
+          "hybrid_inverter",
+          "mounting_structure",
+          "power_optimizer",
+          "smart_meter_or_cabinet",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "ac_surge_protection",
+          "all_inclusive_package",
+          "battery_storage",
+          "energy_manager_b",
+          "optional_pv_insurance",
+          "smart_guard_63a",
+          "smart_meter_or_cabinet",
+          "system_planning"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "ac_surge_protection",
+          "all_inclusive_package_b",
+          "battery_storage",
+          "energy_management_system",
+          "ev_wallbox",
+          "selective_circuit_breaker_sls",
+          "smart_meter_or_cabinet",
+          "sub_distribution_board"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "all_inclusive_package_b",
+          "automatic_transfer_switch",
+          "battery_storage",
+          "dc_install_concrete_tile_roof",
+          "energy_management_system",
+          "equipotential_bonding",
+          "smart_meter_or_cabinet",
+          "system_planning"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "all_inclusive_package_b",
+          "dc_install_concrete_tile_roof",
+          "mounting_structure",
+          "optional_solar_credit",
+          "scaffolding_setup_removal",
+          "smart_meter_or_cabinet",
+          "system_planning",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 1
+      }
+    ],
+    "Reonic Variant 8": [
+      {
+        "components": [
+          "hybrid_inverter",
+          "pv_module"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "backup_gateway",
+          "battery_storage",
+          "delivery_logistics",
+          "electrical_installation",
+          "ev_wallbox",
+          "grid_registration",
+          "mounting_structure",
+          "site_setup_safety"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "ac_installation_package",
+          "backup_solution_socket",
+          "battery_storage",
+          "dc_install_concrete_tile_roof",
+          "mounting_structure",
+          "scaffolding_setup_removal",
+          "system_planning",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "ac_surge_protection",
+          "all_inclusive_package",
+          "dc_install_concrete_roof",
+          "home_energy_monitor",
+          "hybrid_inverter",
+          "mounting_structure",
+          "scaffolding_setup_removal",
+          "smart_meter_or_cabinet"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "battery_storage",
+          "energy_manager_c",
+          "ev_wallbox",
+          "on_site_grounding_prep",
+          "on_site_sub_distribution_board_prep",
+          "smart_meter_or_cabinet",
+          "system_planning",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "all_inclusive_package",
+          "battery_storage",
+          "mounting_structure",
+          "removal_of_satellite_dish",
+          "scaffolding_setup_removal",
+          "smart_meter_or_cabinet",
+          "sub_distribution_board",
+          "system_planning"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "battery_storage",
+          "ev_wallbox",
+          "install_emergency_power_box",
+          "mounting_structure",
+          "scaffolding_setup_removal",
+          "smart_guard_63a",
+          "system_planning",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "all_inclusive_package",
+          "battery_storage",
+          "hybrid_inverter",
+          "scaffolding_setup_removal",
+          "smart_guard_63a",
+          "sub_distribution_board",
+          "system_planning",
+          "ventilation_tile"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "all_inclusive_package",
+          "dc_install_concrete_roof",
+          "dc_install_flat_roof",
+          "mounting_structure",
+          "power_optimizer",
+          "scaffolding_setup_removal",
+          "selective_circuit_breaker_sls",
+          "smart_meter_or_cabinet"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "dc_install_clay_tile_roof",
+          "garden_work_small_b",
+          "heat_pump_hydraulic_station",
+          "hot_water_storage_300l",
+          "mounting_structure",
+          "scaffolding_setup_removal",
+          "smart_heating_controller",
+          "use_of_flat_ventilation_tile"
+        ],
+        "count": 1
+      }
+    ],
+    "Reonic Variant 4": [
+      {
+        "components": [
+          "all_inclusive_package_extension",
+          "battery_storage",
+          "travel_logistics_flat_rate_extension"
+        ],
+        "count": 4
+      },
+      {
+        "components": [
+          "ev_wallbox"
+        ],
+        "count": 2
+      },
+      {
+        "components": [
+          "all_inclusive_package_b",
+          "dc_install_concrete_tile_roof",
+          "hybrid_inverter",
+          "mounting_structure",
+          "optional_solar_credit",
+          "scaffolding_setup_removal",
+          "smart_meter_or_cabinet",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 2
+      },
+      {
+        "components": [
+          "all_inclusive_package_b",
+          "battery_storage",
+          "dc_install_concrete_tile_roof",
+          "hybrid_inverter",
+          "mounting_structure",
+          "optional_solar_credit",
+          "system_planning",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 2
+      },
+      {
+        "components": [
+          "battery_storage"
+        ],
+        "count": 2
+      },
+      {
+        "components": [
+          "backup_gateway",
+          "battery_storage",
+          "delivery_logistics",
+          "electrical_installation",
+          "extra_cable_route_1m_dc_per_string_b"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "battery_storage",
+          "delivery_logistics",
+          "electrical_installation",
+          "grid_registration",
+          "hybrid_inverter",
+          "mounting_structure",
+          "pv_module",
+          "site_setup_safety"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "battery_storage",
+          "smart_meter_or_cabinet"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "complete_package_2_goodwe_10_8kwp_10kwh",
+          "manual_transfer_switch"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "complete_package_3_foxess_15_3kwp_15kwh",
+          "smart_meter_or_cabinet"
+        ],
+        "count": 1
+      }
+    ],
+    "Reonic Variant 5": [
+      {
+        "components": [
+          "battery_storage"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "battery_storage",
+          "complete_package_2_foxess_10_8kwp_10kwh",
+          "power_optimizer"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "backup_gateway",
+          "battery_storage",
+          "delivery_logistics",
+          "electrical_installation",
+          "grid_registration",
+          "hybrid_inverter",
+          "mounting_structure",
+          "site_setup_safety"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "battery_storage",
+          "delivery_logistics",
+          "electrical_installation",
+          "grid_registration",
+          "manual_transfer_switch",
+          "pv_module",
+          "site_setup_safety",
+          "system_planning"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "complete_package_3_foxess_15_3kwp_15kwh",
+          "ev_wallbox"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "battery_storage",
+          "complete_package_price",
+          "delivery_logistics",
+          "electrical_installation",
+          "grid_registration",
+          "mounting_structure",
+          "power_optimizer",
+          "site_setup_safety"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "backup_gateway",
+          "complete_package_2_sigenergy_10_8kwp_9kwh_b"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "all_inclusive_package_b",
+          "battery_storage",
+          "home_energy_monitor",
+          "scaffolding_setup_removal",
+          "selective_circuit_breaker_sls",
+          "smart_meter_or_cabinet",
+          "system_planning",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "all_inclusive_package_b",
+          "battery_storage",
+          "dc_install_flat_roof",
+          "hybrid_inverter",
+          "scaffolding_setup_removal",
+          "smart_meter_or_cabinet",
+          "system_planning",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "all_inclusive_package_b",
+          "battery_storage",
+          "energy_management_system",
+          "energy_manager_c",
+          "hybrid_inverter",
+          "smart_meter_or_cabinet",
+          "system_planning",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 1
+      }
+    ],
+    "Reonic Variant 7": [
+      {
+        "components": [
+          "all_inclusive_package_b",
+          "battery_storage",
+          "dc_install_clay_tile_roof",
+          "hybrid_inverter",
+          "mounting_structure",
+          "optional_solar_credit",
+          "scaffolding_setup_removal",
+          "smart_meter_or_cabinet"
+        ],
+        "count": 2
+      },
+      {
+        "components": [
+          "battery_storage",
+          "delivery_logistics",
+          "electrical_installation",
+          "grid_registration",
+          "hybrid_inverter",
+          "mounting_structure",
+          "pv_module",
+          "site_setup_safety"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "backup_gateway",
+          "battery_storage",
+          "complete_package_4_sigenergy_18kwp_9kwh_b",
+          "hybrid_inverter",
+          "mounting_structure",
+          "pv_module",
+          "roof_reinforcement"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "battery_storage",
+          "dc_install_concrete_tile_roof",
+          "energy_manager_b",
+          "hybrid_inverter",
+          "mounting_structure",
+          "power_optimizer",
+          "selective_circuit_breaker_sls",
+          "smart_meter_or_cabinet"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "all_inclusive_package_b",
+          "battery_storage",
+          "dc_install_concrete_tile_roof",
+          "install_emergency_power_box",
+          "mounting_structure",
+          "scaffolding_setup_removal",
+          "smart_guard_63a",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "ac_surge_protection",
+          "all_inclusive_package_b",
+          "battery_storage",
+          "mounting_structure",
+          "optional_solar_credit",
+          "smart_meter_or_cabinet",
+          "sub_distribution_board",
+          "system_planning"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "all_inclusive_package_b",
+          "dc_install_concrete_tile_roof",
+          "mounting_structure",
+          "scaffolding_setup_removal",
+          "smart_meter_or_cabinet",
+          "system_planning",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "energy_management_system",
+          "pv_complete_package_8kw",
+          "smart_meter_or_cabinet"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "ac_surge_protection",
+          "all_inclusive_package_b",
+          "battery_storage",
+          "optional_pv_insurance",
+          "optional_solar_credit",
+          "sub_distribution_board",
+          "system_planning",
+          "use_of_universal_metal_tiles"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "all_inclusive_package_b",
+          "energy_management_system",
+          "energy_manager_c",
+          "selective_circuit_breaker_sls",
+          "smart_meter_or_cabinet",
+          "system_planning",
+          "use_of_flat_ventilation_tile",
+          "use_of_universal_metal_tiles"
+        ],
+        "count": 1
+      }
+    ],
+    "Reonic Variant 10": [
+      {
+        "components": [
+          "ev_wallbox"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "ac_surge_protection",
+          "all_inclusive_package_b",
+          "battery_storage",
+          "dc_install_concrete_tile_roof",
+          "hybrid_inverter",
+          "pv_module",
+          "selective_circuit_breaker_sls",
+          "smart_meter_or_cabinet"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "ev_charger_b",
+          "ev_wallbox"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "ac_surge_protection",
+          "all_inclusive_package",
+          "battery_storage",
+          "equipotential_bonding",
+          "optional_solar_credit",
+          "selective_circuit_breaker_sls",
+          "smart_guard_63a",
+          "smart_meter_or_cabinet"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "battery_storage",
+          "dc_install_concrete_tile_roof",
+          "energy_management_system",
+          "energy_manager_c",
+          "hybrid_inverter",
+          "mounting_structure",
+          "system_planning",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "garden_work_small_b",
+          "heat_pump_5_5kw_230v",
+          "heat_pump_hydraulic_station",
+          "heat_pump_installation_compact_b",
+          "optional_solar_credit",
+          "professional_install_sealing_white_tank",
+          "radiator_replacement",
+          "smart_heating_controller"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "ac_surge_protection",
+          "all_inclusive_package_b",
+          "battery_storage",
+          "dc_install_concrete_tile_roof",
+          "energy_management_system",
+          "ev_wallbox",
+          "mounting_structure",
+          "selective_circuit_breaker_sls"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "ac_surge_protection",
+          "all_inclusive_package",
+          "battery_storage",
+          "smart_guard_63a",
+          "smart_meter_or_cabinet",
+          "sub_distribution_board",
+          "system_planning",
+          "ventilation_tile"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "buffer_storage_200l",
+          "garden_work_small_b",
+          "heat_pump_7_5kw_230v",
+          "heat_pump_hydraulic_station",
+          "heat_pump_installation_compact_b",
+          "hot_water_storage_300l",
+          "smart_heating_controller"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "buffer_storage_200l",
+          "garden_work_small_b",
+          "heat_pump_10_5kw_400v",
+          "heat_pump_hydraulic_station",
+          "heat_pump_installation_compact_b",
+          "hot_water_storage_300l",
+          "smart_heating_controller"
+        ],
+        "count": 1
+      }
+    ],
+    "Reonic Variant 9": [
+      {
+        "components": [
+          "ev_wallbox"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "all_inclusive_package_b",
+          "battery_storage",
+          "dc_install_concrete_tile_roof",
+          "mounting_structure",
+          "removal_of_roof_steps",
+          "smart_meter_or_cabinet",
+          "system_planning",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "all_inclusive_package_b",
+          "battery_storage",
+          "dc_install_concrete_tile_roof",
+          "hybrid_inverter",
+          "mounting_structure",
+          "pv_module",
+          "scaffolding_setup_removal_quote",
+          "system_planning"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "dc_install_concrete_roof",
+          "energy_manager_pro_2",
+          "hybrid_inverter",
+          "mounting_structure",
+          "optional_pv_insurance",
+          "power_optimizer",
+          "scaffolding_setup_removal",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "all_inclusive_package",
+          "battery_storage",
+          "mounting_structure",
+          "scaffolding_setup_removal",
+          "sub_distribution_board",
+          "system_planning",
+          "travel_logistics_flat_rate",
+          "ventilation_tile"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "all_inclusive_package_b",
+          "dc_install_clay_tile_roof",
+          "energy_management_system",
+          "hybrid_inverter",
+          "mounting_structure",
+          "power_optimizer",
+          "smart_meter_or_cabinet",
+          "system_planning"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "automatic_transfer_switch",
+          "battery_storage",
+          "dc_install_concrete_tile_roof",
+          "install_emergency_power_box",
+          "mounting_structure",
+          "scaffolding_setup_removal_quote",
+          "system_planning",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 1
+      }
+    ],
+    "Reonic Variant 15": [
+      {
+        "components": [
+          "ev_charger_b",
+          "ev_wallbox"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "buffer_storage_200l",
+          "garden_work_small_b",
+          "heat_pump_7_5kw_230v",
+          "heat_pump_hydraulic_station",
+          "heat_pump_installation_compact_b",
+          "hot_water_storage_300l",
+          "smart_heating_controller"
+        ],
+        "count": 1
+      }
+    ],
+    "Reonic Variant 11": [
+      {
+        "components": [
+          "ac_surge_protection",
+          "all_inclusive_package",
+          "energy_manager_pro_2",
+          "equipotential_bonding",
+          "optional_pv_insurance",
+          "optional_solar_credit",
+          "selective_circuit_breaker_sls",
+          "smart_meter_or_cabinet"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "battery_storage",
+          "dc_install_concrete_roof",
+          "hybrid_inverter",
+          "mounting_structure",
+          "scaffolding_setup_removal",
+          "smart_guard_63a",
+          "system_planning",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "battery_storage",
+          "dc_install_clay_tile_roof",
+          "energy_management_system",
+          "hybrid_inverter",
+          "mounting_structure",
+          "power_optimizer",
+          "scaffolding_setup_removal",
+          "smart_guard_63a"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "all_inclusive_package_extension",
+          "dc_install_flat_roof",
+          "mounting_structure",
+          "scaffolding_setup_removal",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 1
+      }
+    ],
+    "Reonic Variant 19": [
+      {
+        "components": [
+          "all_inclusive_package_b",
+          "battery_storage",
+          "dc_install_flat_roof",
+          "mounting_structure",
+          "optional_solar_credit",
+          "scaffolding_setup_removal",
+          "smart_meter_or_cabinet",
+          "travel_logistics_flat_rate"
+        ],
+        "count": 1
+      }
+    ],
+    "Reonic Variant 12": [
+      {
+        "components": [
+          "battery_storage",
+          "mounting_structure",
+          "scaffolding_setup_removal",
+          "smart_guard_63a",
+          "smart_meter_or_cabinet",
+          "system_planning",
+          "travel_logistics_flat_rate",
+          "use_of_flat_ventilation_tile"
+        ],
+        "count": 1
+      },
+      {
+        "components": [
+          "dc_install_concrete_tile_roof",
+          "energy_management_system",
+          "energy_manager_c",
+          "mounting_structure",
+          "scaffolding_setup_removal_quote",
+          "system_planning",
+          "travel_logistics_flat_rate",
+          "use_of_flat_ventilation_tile"
+        ],
+        "count": 1
+      }
+    ],
+    "Reonic Variant 13": [
+      {
+        "components": [
+          "buffer_storage_200l",
+          "garden_work_small_b",
+          "heat_pump_10_5kw_400v",
+          "heat_pump_hydraulic_station",
+          "heat_pump_installation_compact_b",
+          "hot_water_storage_300l",
+          "smart_heating_controller"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  "topCoOccurrencePairs": [
+    {
+      "a": "battery_storage",
+      "b": "mounting_structure",
+      "count": 737
+    },
+    {
+      "a": "system_planning",
+      "b": "travel_logistics_flat_rate",
+      "count": 625
+    },
+    {
+      "a": "battery_storage",
+      "b": "system_planning",
+      "count": 615
+    },
+    {
+      "a": "mounting_structure",
+      "b": "travel_logistics_flat_rate",
+      "count": 592
+    },
+    {
+      "a": "mounting_structure",
+      "b": "system_planning",
+      "count": 586
+    },
+    {
+      "a": "hybrid_inverter",
+      "b": "mounting_structure",
+      "count": 550
+    },
+    {
+      "a": "battery_storage",
+      "b": "travel_logistics_flat_rate",
+      "count": 548
+    },
+    {
+      "a": "battery_storage",
+      "b": "hybrid_inverter",
+      "count": 532
+    },
+    {
+      "a": "battery_storage",
+      "b": "smart_meter_or_cabinet",
+      "count": 519
+    },
+    {
+      "a": "mounting_structure",
+      "b": "scaffolding_setup_removal",
+      "count": 506
+    },
+    {
+      "a": "scaffolding_setup_removal",
+      "b": "travel_logistics_flat_rate",
+      "count": 488
+    },
+    {
+      "a": "hybrid_inverter",
+      "b": "travel_logistics_flat_rate",
+      "count": 444
+    },
+    {
+      "a": "hybrid_inverter",
+      "b": "system_planning",
+      "count": 438
+    },
+    {
+      "a": "scaffolding_setup_removal",
+      "b": "system_planning",
+      "count": 436
+    },
+    {
+      "a": "hybrid_inverter",
+      "b": "smart_meter_or_cabinet",
+      "count": 433
+    },
+    {
+      "a": "mounting_structure",
+      "b": "smart_meter_or_cabinet",
+      "count": 424
+    },
+    {
+      "a": "battery_storage",
+      "b": "scaffolding_setup_removal",
+      "count": 407
+    },
+    {
+      "a": "all_inclusive_package_b",
+      "b": "battery_storage",
+      "count": 395
+    },
+    {
+      "a": "smart_meter_or_cabinet",
+      "b": "system_planning",
+      "count": 389
+    },
+    {
+      "a": "all_inclusive_package_b",
+      "b": "smart_meter_or_cabinet",
+      "count": 384
+    },
+    {
+      "a": "smart_meter_or_cabinet",
+      "b": "travel_logistics_flat_rate",
+      "count": 383
+    },
+    {
+      "a": "hybrid_inverter",
+      "b": "scaffolding_setup_removal",
+      "count": 343
+    },
+    {
+      "a": "all_inclusive_package_b",
+      "b": "hybrid_inverter",
+      "count": 323
+    },
+    {
+      "a": "all_inclusive_package_b",
+      "b": "mounting_structure",
+      "count": 317
+    },
+    {
+      "a": "all_inclusive_package_b",
+      "b": "system_planning",
+      "count": 307
+    },
+    {
+      "a": "all_inclusive_package_b",
+      "b": "travel_logistics_flat_rate",
+      "count": 304
+    },
+    {
+      "a": "scaffolding_setup_removal",
+      "b": "smart_meter_or_cabinet",
+      "count": 302
+    },
+    {
+      "a": "all_inclusive_package_b",
+      "b": "optional_solar_credit",
+      "count": 298
+    },
+    {
+      "a": "battery_storage",
+      "b": "optional_solar_credit",
+      "count": 295
+    },
+    {
+      "a": "dc_install_concrete_tile_roof",
+      "b": "mounting_structure",
+      "count": 274
+    },
+    {
+      "a": "battery_storage",
+      "b": "ev_wallbox",
+      "count": 268
+    },
+    {
+      "a": "optional_solar_credit",
+      "b": "smart_meter_or_cabinet",
+      "count": 252
+    },
+    {
+      "a": "battery_storage",
+      "b": "dc_install_concrete_tile_roof",
+      "count": 234
+    },
+    {
+      "a": "dc_install_concrete_tile_roof",
+      "b": "hybrid_inverter",
+      "count": 229
+    },
+    {
+      "a": "dc_install_concrete_tile_roof",
+      "b": "travel_logistics_flat_rate",
+      "count": 220
+    },
+    {
+      "a": "all_inclusive_package_b",
+      "b": "scaffolding_setup_removal",
+      "count": 217
+    },
+    {
+      "a": "hybrid_inverter",
+      "b": "optional_solar_credit",
+      "count": 216
+    },
+    {
+      "a": "mounting_structure",
+      "b": "optional_solar_credit",
+      "count": 216
+    },
+    {
+      "a": "optional_solar_credit",
+      "b": "system_planning",
+      "count": 213
+    },
+    {
+      "a": "optional_solar_credit",
+      "b": "travel_logistics_flat_rate",
+      "count": 205
+    },
+    {
+      "a": "dc_install_concrete_tile_roof",
+      "b": "scaffolding_setup_removal",
+      "count": 199
+    },
+    {
+      "a": "dc_install_concrete_tile_roof",
+      "b": "system_planning",
+      "count": 195
+    },
+    {
+      "a": "grid_registration",
+      "b": "mounting_structure",
+      "count": 194
+    },
+    {
+      "a": "delivery_logistics",
+      "b": "grid_registration",
+      "count": 190
+    },
+    {
+      "a": "ac_surge_protection",
+      "b": "hybrid_inverter",
+      "count": 190
+    },
+    {
+      "a": "mounting_structure",
+      "b": "site_setup_safety",
+      "count": 189
+    },
+    {
+      "a": "delivery_logistics",
+      "b": "mounting_structure",
+      "count": 188
+    },
+    {
+      "a": "grid_registration",
+      "b": "site_setup_safety",
+      "count": 188
+    },
+    {
+      "a": "selective_circuit_breaker_sls",
+      "b": "smart_meter_or_cabinet",
+      "count": 187
+    },
+    {
+      "a": "battery_storage",
+      "b": "grid_registration",
+      "count": 186
+    },
+    {
+      "a": "delivery_logistics",
+      "b": "site_setup_safety",
+      "count": 184
+    },
+    {
+      "a": "ev_wallbox",
+      "b": "mounting_structure",
+      "count": 183
+    },
+    {
+      "a": "electrical_installation",
+      "b": "grid_registration",
+      "count": 182
+    },
+    {
+      "a": "battery_storage",
+      "b": "delivery_logistics",
+      "count": 181
+    },
+    {
+      "a": "electrical_installation",
+      "b": "mounting_structure",
+      "count": 181
+    },
+    {
+      "a": "delivery_logistics",
+      "b": "electrical_installation",
+      "count": 179
+    },
+    {
+      "a": "battery_storage",
+      "b": "site_setup_safety",
+      "count": 179
+    },
+    {
+      "a": "battery_storage",
+      "b": "electrical_installation",
+      "count": 177
+    },
+    {
+      "a": "all_inclusive_package_b",
+      "b": "dc_install_concrete_tile_roof",
+      "count": 177
+    },
+    {
+      "a": "dc_install_concrete_tile_roof",
+      "b": "smart_meter_or_cabinet",
+      "count": 177
+    },
+    {
+      "a": "ac_surge_protection",
+      "b": "smart_meter_or_cabinet",
+      "count": 177
+    },
+    {
+      "a": "electrical_installation",
+      "b": "site_setup_safety",
+      "count": 173
+    },
+    {
+      "a": "hybrid_inverter",
+      "b": "selective_circuit_breaker_sls",
+      "count": 164
+    },
+    {
+      "a": "ac_surge_protection",
+      "b": "selective_circuit_breaker_sls",
+      "count": 162
+    },
+    {
+      "a": "ev_wallbox",
+      "b": "travel_logistics_flat_rate",
+      "count": 162
+    },
+    {
+      "a": "ev_wallbox",
+      "b": "system_planning",
+      "count": 160
+    },
+    {
+      "a": "optional_solar_credit",
+      "b": "scaffolding_setup_removal",
+      "count": 156
+    },
+    {
+      "a": "ac_surge_protection",
+      "b": "battery_storage",
+      "count": 153
+    },
+    {
+      "a": "energy_manager_b",
+      "b": "hybrid_inverter",
+      "count": 148
+    },
+    {
+      "a": "ac_surge_protection",
+      "b": "mounting_structure",
+      "count": 145
+    },
+    {
+      "a": "dc_install_clay_tile_roof",
+      "b": "mounting_structure",
+      "count": 145
+    },
+    {
+      "a": "battery_storage",
+      "b": "selective_circuit_breaker_sls",
+      "count": 144
+    },
+    {
+      "a": "mounting_structure",
+      "b": "power_optimizer",
+      "count": 142
+    },
+    {
+      "a": "ev_wallbox",
+      "b": "smart_meter_or_cabinet",
+      "count": 139
+    },
+    {
+      "a": "ac_surge_protection",
+      "b": "travel_logistics_flat_rate",
+      "count": 131
+    },
+    {
+      "a": "all_inclusive_package",
+      "b": "smart_meter_or_cabinet",
+      "count": 129
+    },
+    {
+      "a": "dc_install_clay_tile_roof",
+      "b": "hybrid_inverter",
+      "count": 128
+    },
+    {
+      "a": "battery_storage",
+      "b": "power_optimizer",
+      "count": 125
+    },
+    {
+      "a": "optional_pv_insurance",
+      "b": "optional_solar_credit",
+      "count": 125
+    },
+    {
+      "a": "ac_surge_protection",
+      "b": "system_planning",
+      "count": 125
+    },
+    {
+      "a": "all_inclusive_package_b",
+      "b": "selective_circuit_breaker_sls",
+      "count": 125
+    },
+    {
+      "a": "ev_wallbox",
+      "b": "hybrid_inverter",
+      "count": 123
+    },
+    {
+      "a": "all_inclusive_package",
+      "b": "battery_storage",
+      "count": 123
+    },
+    {
+      "a": "dc_install_clay_tile_roof",
+      "b": "travel_logistics_flat_rate",
+      "count": 121
+    },
+    {
+      "a": "mounting_structure",
+      "b": "selective_circuit_breaker_sls",
+      "count": 120
+    },
+    {
+      "a": "ev_wallbox",
+      "b": "scaffolding_setup_removal",
+      "count": 120
+    },
+    {
+      "a": "hybrid_inverter",
+      "b": "power_optimizer",
+      "count": 119
+    },
+    {
+      "a": "dc_install_concrete_tile_roof",
+      "b": "optional_solar_credit",
+      "count": 118
+    },
+    {
+      "a": "energy_manager_b",
+      "b": "mounting_structure",
+      "count": 117
+    },
+    {
+      "a": "battery_storage",
+      "b": "dc_install_clay_tile_roof",
+      "count": 113
+    },
+    {
+      "a": "battery_storage",
+      "b": "optional_pv_insurance",
+      "count": 112
+    },
+    {
+      "a": "ac_surge_protection",
+      "b": "all_inclusive_package_b",
+      "count": 111
+    },
+    {
+      "a": "optional_pv_insurance",
+      "b": "smart_meter_or_cabinet",
+      "count": 109
+    },
+    {
+      "a": "dc_install_clay_tile_roof",
+      "b": "system_planning",
+      "count": 109
+    },
+    {
+      "a": "battery_storage",
+      "b": "energy_manager_b",
+      "count": 108
+    },
+    {
+      "a": "energy_manager_b",
+      "b": "travel_logistics_flat_rate",
+      "count": 108
+    },
+    {
+      "a": "all_inclusive_package",
+      "b": "hybrid_inverter",
+      "count": 107
+    },
+    {
+      "a": "energy_manager_b",
+      "b": "smart_meter_or_cabinet",
+      "count": 106
+    },
+    {
+      "a": "all_inclusive_package",
+      "b": "travel_logistics_flat_rate",
+      "count": 105
+    },
+    {
+      "a": "all_inclusive_package",
+      "b": "mounting_structure",
+      "count": 104
+    },
+    {
+      "a": "all_inclusive_package",
+      "b": "system_planning",
+      "count": 103
+    },
+    {
+      "a": "all_inclusive_package_b",
+      "b": "ev_wallbox",
+      "count": 103
+    },
+    {
+      "a": "power_optimizer",
+      "b": "travel_logistics_flat_rate",
+      "count": 102
+    },
+    {
+      "a": "all_inclusive_package_b",
+      "b": "optional_pv_insurance",
+      "count": 102
+    },
+    {
+      "a": "selective_circuit_breaker_sls",
+      "b": "system_planning",
+      "count": 102
+    },
+    {
+      "a": "selective_circuit_breaker_sls",
+      "b": "travel_logistics_flat_rate",
+      "count": 102
+    },
+    {
+      "a": "equipotential_bonding",
+      "b": "smart_meter_or_cabinet",
+      "count": 99
+    },
+    {
+      "a": "ac_surge_protection",
+      "b": "scaffolding_setup_removal",
+      "count": 99
+    },
+    {
+      "a": "battery_storage",
+      "b": "travel_logistics_flat_rate_extension",
+      "count": 98
+    },
+    {
+      "a": "energy_manager_b",
+      "b": "system_planning",
+      "count": 96
+    },
+    {
+      "a": "power_optimizer",
+      "b": "smart_meter_or_cabinet",
+      "count": 91
+    },
+    {
+      "a": "all_inclusive_package_b",
+      "b": "dc_install_clay_tile_roof",
+      "count": 91
+    },
+    {
+      "a": "power_optimizer",
+      "b": "system_planning",
+      "count": 90
+    },
+    {
+      "a": "power_optimizer",
+      "b": "scaffolding_setup_removal",
+      "count": 89
+    },
+    {
+      "a": "dc_install_clay_tile_roof",
+      "b": "smart_meter_or_cabinet",
+      "count": 87
+    },
+    {
+      "a": "energy_manager_b",
+      "b": "scaffolding_setup_removal",
+      "count": 87
+    },
+    {
+      "a": "hybrid_inverter",
+      "b": "optional_pv_insurance",
+      "count": 86
+    },
+    {
+      "a": "smart_meter_or_cabinet",
+      "b": "sub_distribution_board",
+      "count": 85
+    },
+    {
+      "a": "battery_storage",
+      "b": "smart_guard_63a",
+      "count": 85
+    },
+    {
+      "a": "scaffolding_setup_removal",
+      "b": "selective_circuit_breaker_sls",
+      "count": 83
+    }
+  ]
+}

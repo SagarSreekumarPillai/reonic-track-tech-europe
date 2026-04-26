@@ -1,5 +1,8 @@
 import dataset from "@/data/reonic-training-dataset.json";
 import offerModel from "@/data/reonic-offer-model.json";
+import componentModel from "@/data/reonic-component-model.json";
+import componentPredictor from "@/data/reonic-component-predictor.json";
+import componentWeights from "@/data/reonic-component-weights.json";
 import type {
   HouseholdProfile,
   OptimizationPriority,
@@ -48,6 +51,70 @@ type OfferFamily = {
   codes: OfferModelCode[];
 };
 const OFFER_FAMILIES = (offerModel.families as OfferFamily[]) ?? [];
+type ComponentModel = {
+  byFamily?: Record<string, Array<{ component: string; count: number }>>;
+  byObjective?: Record<string, Array<{ component: string; count: number }>>;
+  byFamilyBundles?: Record<
+    string,
+    Array<{
+      components: string[];
+      count: number;
+    }>
+  >;
+  topCoOccurrencePairs?: Array<{ a: string; b: string; count: number }>;
+};
+const COMPONENT_MODEL = componentModel as ComponentModel;
+type ComponentPredictor = {
+  components: Array<{
+    component: string;
+    support: number;
+    centroid: number[];
+    spread: number[];
+  }>;
+};
+const COMPONENT_PREDICTOR = componentPredictor as ComponentPredictor;
+type ComponentWeights = {
+  objectivePrior: number;
+  familyPrior: number;
+  bundleBoost: number;
+  coOccurrence: number;
+  predictor: number;
+};
+const COMPONENT_WEIGHTS = componentWeights as ComponentWeights;
+
+function featureVectorForComponentPredictor(params: {
+  profile: HouseholdProfile;
+  objective: OptimizationPriority;
+  pvKwp: number;
+  batteryKwh: number;
+  moduleCount: number;
+  recommendHeatPump: boolean;
+}) {
+  return [
+    params.profile.annualConsumption,
+    params.profile.electricityPrice,
+    params.profile.hasEV ? 1 : 0,
+    params.profile.householdSize,
+    params.objective === "maximize_savings" ? 1 : 0,
+    params.objective === "minimize_upfront" ? 1 : 0,
+    params.objective === "maximize_self_consumption" ? 1 : 0,
+    params.pvKwp,
+    params.batteryKwh,
+    params.moduleCount,
+    params.recommendHeatPump ? 1 : 0,
+  ];
+}
+
+function gaussianScore(x: number[], centroid: number[], spread: number[]) {
+  const len = Math.min(x.length, centroid.length, spread.length);
+  let score = 0;
+  for (let i = 0; i < len; i += 1) {
+    const sigma = Math.max(0.05, spread[i]);
+    const z = (x[i] - centroid[i]) / sigma;
+    score += z * z;
+  }
+  return Math.exp(-0.5 * score / Math.max(1, len));
+}
 
 function euclidean(a: number[], b: number[]): number {
   const len = Math.min(a.length, b.length);
@@ -80,6 +147,131 @@ function clamp(value: number, min: number, max: number): number {
 
 function roundToHalf(value: number): number {
   return Math.round(value * 2) / 2;
+}
+
+function aggregateComponents(
+  nearest: DataRow[],
+  profile: HouseholdProfile,
+  objective: OptimizationPriority,
+  selectedFamily?: string,
+  predicted?: {
+    pvKwp: number;
+    batteryKwh: number;
+    moduleCount: number;
+    recommendHeatPump: boolean;
+  }
+): string[] {
+  const scored = new Map<string, number>();
+  const scoredNearest = [...nearest]
+    .map((row) => ({ row, d: distance(row, profile, objective) }))
+    .sort((a, b) => a.d - b.d)
+    .slice(0, 10);
+
+  for (const { row, d } of scoredNearest) {
+    const w = 1 / (0.2 + d);
+    for (const component of row.offer.components ?? []) {
+      const key = component.trim();
+      if (!key) continue;
+      scored.set(key, (scored.get(key) ?? 0) + w);
+    }
+  }
+
+  const objectivePriors =
+    (COMPONENT_MODEL.byObjective?.[objective] as
+      | Array<{ component: string; count: number }>
+      | undefined) ?? [];
+  for (const item of objectivePriors.slice(0, 18)) {
+    scored.set(
+      item.component,
+      (scored.get(item.component) ?? 0) + item.count * COMPONENT_WEIGHTS.objectivePrior
+    );
+  }
+
+  if (selectedFamily) {
+    const familyPriors =
+      (COMPONENT_MODEL.byFamily?.[selectedFamily] as
+        | Array<{ component: string; count: number }>
+        | undefined) ?? [];
+    for (const item of familyPriors.slice(0, 18)) {
+      scored.set(
+        item.component,
+        (scored.get(item.component) ?? 0) + item.count * COMPONENT_WEIGHTS.familyPrior
+      );
+    }
+  }
+
+  const provisional = [...scored.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10)
+    .map(([name]) => name.toLowerCase());
+
+  if (selectedFamily) {
+    const bundles = COMPONENT_MODEL.byFamilyBundles?.[selectedFamily] ?? [];
+    let bestBundle: string[] | null = null;
+    let bestScore = -1;
+    for (const bundle of bundles.slice(0, 6)) {
+      const setA = new Set(provisional);
+      const setB = new Set(bundle.components.map((x) => x.toLowerCase()));
+      const overlap = [...setA].filter((x) => setB.has(x)).length;
+      const union = new Set([...setA, ...setB]).size;
+      const jaccard = union > 0 ? overlap / union : 0;
+      const weighted = jaccard + bundle.count * 0.005;
+      if (weighted > bestScore) {
+        bestScore = weighted;
+        bestBundle = bundle.components;
+      }
+    }
+    if (bestBundle) {
+      for (const c of bestBundle) {
+        scored.set(c, (scored.get(c) ?? 0) + COMPONENT_WEIGHTS.bundleBoost);
+      }
+    }
+  }
+
+  const predictorX = featureVectorForComponentPredictor({
+    profile,
+    objective,
+    pvKwp: predicted?.pvKwp ?? profile.annualConsumption / 1000,
+    batteryKwh: predicted?.batteryKwh ?? (profile.hasEV ? 10 : 6),
+    moduleCount: predicted?.moduleCount ?? Math.max(4, Math.round(profile.roofArea / 2)),
+    recommendHeatPump:
+      predicted?.recommendHeatPump ??
+      (profile.heatingType === "gas" || profile.heatingType === "oil"),
+  });
+  for (const c of COMPONENT_PREDICTOR.components ?? []) {
+    const s =
+      gaussianScore(predictorX, c.centroid, c.spread) *
+      Math.log1p(c.support) *
+      COMPONENT_WEIGHTS.predictor;
+    scored.set(c.component, (scored.get(c.component) ?? 0) + s);
+  }
+
+  const pairs = COMPONENT_MODEL.topCoOccurrencePairs ?? [];
+  const topNow = [...scored.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 6)
+    .map(([name]) => name.toLowerCase());
+  const topSet = new Set(topNow);
+  for (const p of pairs.slice(0, 100)) {
+    const aIn = topSet.has(p.a);
+    const bIn = topSet.has(p.b);
+    if (aIn && !bIn) {
+      scored.set(
+        p.b,
+        (scored.get(p.b) ?? 0) + p.count * COMPONENT_WEIGHTS.coOccurrence
+      );
+    } else if (!aIn && bIn) {
+      scored.set(
+        p.a,
+        (scored.get(p.a) ?? 0) + p.count * COMPONENT_WEIGHTS.coOccurrence
+      );
+    }
+  }
+
+  return [...scored.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 8)
+    .map(([name]) => name);
 }
 
 export function predictFromReonicDataset(
@@ -159,6 +351,18 @@ export function predictFromReonicDataset(
     .slice(0, 3);
 
   const chosenFamily = scoredFamilies[0]?.family;
+  const predictedComponents = aggregateComponents(
+    nearest,
+    profile,
+    objective,
+    chosenFamily?.family,
+    {
+      pvKwp: pvSizeKw,
+      batteryKwh,
+      moduleCount: estimatedModuleCount,
+      recommendHeatPump,
+    }
+  );
   const familyCodes = (chosenFamily?.codes ?? []).map((code) => ({
     ...code,
     score:
@@ -173,7 +377,10 @@ export function predictFromReonicDataset(
     code: primary?.code ?? offerSource.code,
     title: primary?.title ?? offerSource.title,
     positioning: primary?.positioning ?? offerSource.positioning,
-    components: (primary?.components ?? chosenFamily?.components ?? offerSource.components).slice(0, 6),
+    components:
+      predictedComponents.length > 0
+        ? predictedComponents.slice(0, 6)
+        : (primary?.components ?? chosenFamily?.components ?? offerSource.components).slice(0, 6),
     estimatedPrice: 0,
     bestFor: objective,
   };
@@ -184,7 +391,10 @@ export function predictFromReonicDataset(
       code: row.code,
       title: row.title,
       positioning: row.positioning,
-      components: row.components.slice(0, 6),
+      components:
+        predictedComponents.length > 0
+          ? predictedComponents.slice(0, 6)
+          : row.components.slice(0, 6),
       estimatedPrice: 0,
       bestFor: row.objectiveHint,
     }));

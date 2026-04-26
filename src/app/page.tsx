@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { RoofModelViewer } from "@/components/RoofModelViewer";
 import type { DesignResponse, HouseholdProfile, OptimizationPriority } from "@/types/design";
 
 const DEMO_PROFILE: HouseholdProfile = {
@@ -26,6 +27,9 @@ export default function Home() {
     useState<OptimizationPriority>("maximize_savings");
   const [priceOverride, setPriceOverride] = useState<number | "">("");
   const [evOverride, setEvOverride] = useState<"default" | "yes" | "no">("default");
+  const [roofModel, setRoofModel] = useState<
+    "brandenburg" | "hamburg" | "north_germany" | "ruhr"
+  >("brandenburg");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<DesignResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -50,6 +54,7 @@ export default function Home() {
             evAssumptionOverride:
               evOverride === "default" ? undefined : evOverride === "yes",
           },
+          roofModel,
         }),
       });
 
@@ -135,6 +140,16 @@ export default function Home() {
               onChange={(value) => setProfile({ ...profile, hasHeatPump: value === "yes" })}
             />
             <LabeledSelect
+              label="3D roof model"
+              value={roofModel}
+              options={["brandenburg", "hamburg", "north_germany", "ruhr"]}
+              onChange={(value) =>
+                setRoofModel(
+                  value as "brandenburg" | "hamburg" | "north_germany" | "ruhr"
+                )
+              }
+            />
+            <LabeledSelect
               label="Optimization priority"
               value={priority}
               options={[
@@ -170,6 +185,7 @@ export default function Home() {
             <p className="text-slate-400">Generate a design to view recommendations.</p>
           ) : (
             <div className="space-y-3">
+              <RoofModelViewer modelKey={roofModel} />
               <MetricCard label="PV Size" value={`${result.recommendation.pvSizeKw} kWp`} />
               <MetricCard
                 label="Battery Size"
@@ -191,6 +207,18 @@ export default function Home() {
                 label="Roof Utilization"
                 value={`${result.recommendation.roofUtilizationPct}%`}
               />
+              {result.roofAnalysis ? (
+                <MetricCard
+                  label="Roof usable area (3D)"
+                  value={`${result.roofAnalysis.usableRoofAreaM2} m2`}
+                />
+              ) : null}
+              {result.moduleLayout ? (
+                <MetricCard
+                  label="3D layout grid"
+                  value={`${result.moduleLayout.rows} x ${result.moduleLayout.columns}`}
+                />
+              ) : null}
               <MetricCard label="Install Cost" value={`EUR ${result.financials.installCost}`} />
               <MetricCard
                 label="Annual Savings"
