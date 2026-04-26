@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-export function RoofModelViewer(props: { modelKey: string }) {
+export function RoofModelViewer(props: { modelKey: string; viewerHeight?: number }) {
   useEffect(() => {
     const existing = document.querySelector(
       'script[data-model-viewer="true"]'
@@ -16,6 +16,7 @@ export function RoofModelViewer(props: { modelKey: string }) {
     document.head.appendChild(script);
   }, []);
 
+  const height = props.viewerHeight ?? 220;
   const src = `/models/${props.modelKey}.glb`;
   return (
     <div className="rounded-xl border border-slate-700 bg-slate-900/60 p-2">
@@ -26,7 +27,7 @@ export function RoofModelViewer(props: { modelKey: string }) {
         autoplay
         exposure="1.0"
         shadowIntensity="1"
-        style={{ width: "100%", height: "260px", background: "#020617" }}
+        style={{ width: "100%", height: `${height}px`, background: "#020617" }}
       />
     </div>
   );
