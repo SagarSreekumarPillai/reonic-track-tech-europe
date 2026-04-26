@@ -7,15 +7,15 @@
     "exactCodeLearnability": "non_identifiable"
   },
   "metrics": {
-    "pv_mae": 0.484,
-    "pv_rmse": 1.683,
+    "pv_mae": 0.339,
+    "pv_rmse": 1.248,
     "battery_mae": 0,
     "battery_rmse": 0,
     "heatpump_accuracy": 0.99,
     "offer_top3_accuracy": 0,
-    "offer_family_top3_accuracy": 0.922,
-    "offer_family_top1_accuracy": 0.801,
-    "component_overlap_f1": 0.451
+    "offer_family_top3_accuracy": 0.904,
+    "offer_family_top1_accuracy": 0.78,
+    "component_overlap_f1": 0.479
   },
-  "generatedAt": "2026-04-26T06:19:39.738Z"
+  "generatedAt": "2026-04-26T06:54:09.132Z"
 }
